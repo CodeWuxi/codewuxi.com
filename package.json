@@ -1,0 +1,27 @@
+{
+  "name": "codewuxi.com",
+  "version": "1.0.0",
+  "description": "CodeWuxi Official Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWuxi/codewuxi.com.git"
+  },
+  "keywords": [
+    "CodeWuxi",
+    "Website",
+    "Hackathon"
+  ],
+  "author": "Qilei Ren, Zewen Xu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeWuxi/codewuxi.com/issues"
+  },
+  "homepage": "https://github.com/CodeWuxi/codewuxi.com#readme",
+  "devDependencies": {
+    "webpack": "^4.29.5"
+  }
+}
