@@ -1,56 +1,53 @@
 .index {
 
-    .index-title {
+  .index-title {}
 
-    }
-    
-    .index-content {
-        
-    }
+  .index-content {
+    font-size: .9rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+  }
 
-    .index-banner-site-name {
+  .index-banner-site-name {
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    letter-spacing: 2.5rem;
+  }
 
-    }
-
-    .index-banner {
-        .banner__title {
-
-        }
-
-        .banner__subtitle {
-
-        }
-
-        .banner_slogan {
-
-        }
-
-        .banner_info {
-            
-        }
+  .index-banner {
+    margin-top: 3.8rem;
+    .banner__title {
+      font-size: 5rem;
+      line-height: 7rem;
+      letter-spacing: .1rem;
     }
 
-    .index-introduction {
-
+    .banner__subtitle {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      letter-spacing: .2rem;
     }
 
-    .index-vision {
-
+    .banner_slogan {
+      font-size: 2.9rem;
+      text-align: justify;
     }
 
-    .index-subjects {
-
+    .banner_info {
+      font-size: .8rem;
+      text-align: justify;
     }
+  }
 
-    .index-awards {
+  .index-introduction {}
 
-    }
+  .index-vision {}
 
-    .index-schedule {
+  .index-subjects {}
 
-    }
+  .index-awards {}
 
-    .index-guests {
-        
-    }
+  .index-schedule {}
+
+  .index-guests {}
 }

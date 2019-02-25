@@ -1,1 +1,46 @@
+html {
+  font-size: 62.5%;
+}
 
+body {
+  background-color: #000;
+  color: #fff;
+  h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  header {
+    height: 6rem;
+  }
+
+  .cw-title {
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    letter-spacing: .5rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.8rem;
+      left: -2rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    &::after {
+      content:"";
+      display: inline-block;
+      width:100%;
+      overflow:hidden;
+      height:0;
+    }
+  }
+}
