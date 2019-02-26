@@ -1,5 +1,11 @@
 html {
-  font-size: 62.5%;
+  font-size: 31.5%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -15,6 +21,7 @@ body {
   }
 
   .cw-title {
+    margin-top: 5rem;
     margin-bottom: 1rem;
     position: relative;
     font-size: 2.4rem;
@@ -35,12 +42,6 @@ body {
 
   .cw-text-justify {
     text-align: justify;
-    &::after {
-      content:"";
-      display: inline-block;
-      width:100%;
-      overflow:hidden;
-      height:0;
-    }
+    text-align-last: justify;
   }
 }

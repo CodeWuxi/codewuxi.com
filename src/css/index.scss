@@ -1,53 +1,54 @@
 .index {
 
-  .index-title {}
+  .title {}
 
-  .index-content {
+  .content {
     font-size: .9rem;
     line-height: 1.9rem;
     letter-spacing: .2rem;
   }
 
-  .index-banner-site-name {
+  .banner-site-name {
     font-size: 1rem;
     writing-mode: vertical-rl;
     letter-spacing: 2.5rem;
   }
 
-  .index-banner {
+  .banner {
     margin-top: 3.8rem;
     .banner__title {
-      font-size: 5rem;
+      font-size: 10rem;
+      font-weight: bold;
       line-height: 7rem;
       letter-spacing: .1rem;
     }
 
     .banner__subtitle {
-      font-size: 2.5rem;
+      font-size: 5rem;
       line-height: 3.5rem;
       letter-spacing: .2rem;
     }
 
-    .banner_slogan {
-      font-size: 2.9rem;
+    .banner__slogan {
+      font-size: 5.8rem;
       text-align: justify;
     }
 
-    .banner_info {
-      font-size: .8rem;
+    .banner__info {
+      font-size: 1.6rem;
       text-align: justify;
     }
   }
 
-  .index-introduction {}
+  .introduction {}
 
-  .index-vision {}
+  .vision {}
 
-  .index-subjects {}
+  .subjects {}
 
-  .index-awards {}
+  .awards {}
 
-  .index-schedule {}
+  .schedule {}
 
-  .index-guests {}
+  .guests {}
 }
