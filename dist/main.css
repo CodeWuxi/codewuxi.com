@@ -1,0 +1,184 @@
+@charset "UTF-8";
+html {
+  font-size: 315%; }
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 625%; } }
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  body h1, body h2, body h3, body h4, body h5, body h6, body p {
+    font-weight: normal;
+    margin: 0; }
+  body ul, body li {
+    list-style: none;
+    padding: 0; }
+  body header {
+    height: .8rem; }
+  body .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    position: relative;
+    font-size: .48rem;
+    line-height: .67rem;
+    letter-spacing: .09rem; }
+    body .cw-title:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAACIUlEQVRYR+2XO4jVUBCGv1/BTvGFKPgolG0sfCBiI26jIIpoI1gKriIWgo1WirqF21itheKj0C2sLQQVtLTYXgu1cMFGfFvZ/DJwLlxikpt4T3YXdOAQkhNmvjMzmZmIeSLqksP2fuBmsnFK0uMqe12DvAfWJeMzktb/8yARmnvJC8fnLDQBYPtSXCVdrsvHTnPkP0iZ62clNLYlyXWxny2Qq8A54FPf+ly4HwW+AzfS8y3A9WKRGypZbT8DJoFpYEXF2gMsAT6m/U3AgmKR+2sQ2wuBOP0GSV+rwlMMje3SajsMyFZgStLmNjlS1X+GATkNbJc01gakttfYXgRcAU6mF28BFyX9qnH5feC5pLs5Qa4B5wsKJyRdqAF5AxyU9DonSCTdsoLCL5KWVxSpVcArYGXWOmK7DOSbpKUVIIeBMUkHBg1WrQqa7bLQ/ATis3zRW5LepkY2AfyQNJ4bpDRZ03QVlbG3wm6A7QDGJU1lBRmkrLdveyOwL1XTD+n5Hx7r19cqNE1BUlh2xkAsaVsCK/NYD26kswnN9llgRNKZ4gFKwNYA0QpC8g7Pth8CjyQ9GORJ2zPA2q5AommNSnrXAKSb/xrbcbppSasHQbTdb9X0bB8Fjkk60tbQoPcbgdiOP7Q7wG4gesshSRGibNIU5Amwt8/qU0lRT7JJU5CYORf3WY3yHuNfNmkKMm88EjlyG9gFvAROzEmOZPN/jaLfn8oUMtn2t30AAAAASUVORK5CYII=);
+      background-repeat: no-repeat;
+      background-size: contain; }
+  body .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify; }
+
+.index .section-wrapper {
+  position: relative;
+  padding: 1rem 0; }
+  .index .section-wrapper .banner-site-name {
+    font-size: .2rem;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    letter-spacing: .4rem;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .index .section-wrapper .banner-icon {
+    position: absolute;
+    top: .9rem;
+    left: .3rem;
+    width: 5.231rem;
+    height: 4.816rem;
+    background-image: url(b5b87c3591b731797869219e0939cc9e.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .index .section-wrapper .banner {
+    padding-top: .5rem;
+    z-index: 10; }
+    .index .section-wrapper .banner .banner_title {
+      margin-top: .3rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1rem;
+      text-align: justify; }
+    .index .section-wrapper .banner .banner_subtitle {
+      font-size: .5rem;
+      line-height: .36rem;
+      letter-spacing: .02rem; }
+    .index .section-wrapper .banner .banner_slogan {
+      margin-top: .3rem;
+      font-size: .58rem;
+      line-height: .81rem;
+      text-align: justify; }
+    .index .section-wrapper .banner .banner_info {
+      margin-top: .3rem;
+      font-size: .16rem;
+      line-height: .22rem;
+      text-align: justify; }
+
+.index .introduction-and-vision {
+  margin: .5rem 0;
+  position: relative; }
+  .index .introduction-and-vision .icon-side {
+    position: absolute;
+    top: .2rem;
+    right: 0;
+    width: 7.162rem;
+    height: 8.41rem;
+    background-image: url(ab5baf228c5a43e673c50cc70d8f93aa.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .index .introduction-and-vision .section-wrapper {
+    z-index: 10; }
+  .index .introduction-and-vision .vision-wrapper {
+    margin-top: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 10; }
+    .index .introduction-and-vision .vision-wrapper .title {
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.index .content {
+  font-weight: 200;
+  font-size: .18rem;
+  line-height: .38rem;
+  letter-spacing: .04rem;
+  text-align: justify; }
+
+.index .subjects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center; }
+  .index .subjects-wrapper .title {
+    display: inline-block;
+    -ms-flex-item-align: center;
+        align-self: center; }
+  .index .subjects-wrapper .picture-wall .content {
+    margin-bottom: 20px; }
+  .index .subjects-wrapper .picture-wall .picture-item {
+    margin-bottom: .4rem;
+    min-height: 2.78rem;
+    background-color: #d8d8d8;
+    border-radius: 8px; }
+
+.index .awards-wrapper {
+  min-height: 4rem; }
+
+.index .schedule-wrapper {
+  padding-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .index .schedule-wrapper .title-wrapper .title {
+    margin-bottom: .23rem;
+    font-size: .36rem; }
+  .index .schedule-wrapper .title-wrapper p {
+    font-size: .15rem; }
+  .index .schedule-wrapper .schedule-list {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .index .schedule-wrapper .schedule-list .schedule-item {
+      padding: 0.55rem;
+      background-color: #fff;
+      border-radius: 4px; }
+      .index .schedule-wrapper .schedule-list .schedule-item:first-child {
+        margin-bottom: .4rem; }
+      .index .schedule-wrapper .schedule-list .schedule-item h5 {
+        color: #0D253E;
+        font-size: .3rem; }
+      .index .schedule-wrapper .schedule-list .schedule-item p {
+        color: #aaa;
+        font-size: .2rem; }
+
