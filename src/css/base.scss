@@ -1,0 +1,56 @@
+html {
+  font-size: 315%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 625%;
+  }
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+  }
+
+  header {
+    height: .8rem;
+  }
+
+  .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    position: relative;
+    font-size: .48rem;
+    line-height: .67rem;
+    letter-spacing: .09rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
