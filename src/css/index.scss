@@ -5,17 +5,17 @@
     padding: 1rem 0;
 
     .banner-site-name {
-      font-size: .1rem;
+      font-size: .2rem;
       writing-mode: vertical-rl;
-      letter-spacing: .25rem;
+      letter-spacing: .4rem;
       transform: rotate(180deg);
     }
     .banner-icon {
       position: absolute;
       top: .9rem;
-      left: .2rem;
-      width: 4.2rem;
-      height: 3.86rem;
+      left: .3rem;
+      width: 5.231rem;
+      height: 4.816rem;
       background-image: url('../assets/images/code.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -25,9 +25,9 @@
       z-index: 10;
       .banner_title {
         margin-top: .3rem;
-        font-size: .925rem;
-        font-weight: 600;
-        line-height: .65rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1rem;
         text-align: justify;
       }
 
@@ -40,14 +40,14 @@
       .banner_slogan {
         margin-top: .3rem;
         font-size: .58rem;
-        line-height: .5rem;
+        line-height: .81rem;
         text-align: justify;
       }
 
       .banner_info {
         margin-top: .3rem;
-        font-size: .21rem;
-        line-height: .2rem;
+        font-size: .16rem;
+        line-height: .22rem;
         text-align: justify;
       }
     }
@@ -62,8 +62,8 @@
       position: absolute;
       top: .2rem;
       right: 0;
-      width: 6rem;
-      height: 7.02rem;
+      width: 7.162rem;
+      height: 8.41rem;
       background-image: url('../assets/images/code_side.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -83,14 +83,12 @@
       }
     }
   }
-  .title {}
-
 
   .content {
     font-weight: 200;
-    font-size: .15rem;
-    line-height: .24rem;
-    letter-spacing: .025rem;
+    font-size: .18rem;
+    line-height: .38rem;
+    letter-spacing: .04rem;
     text-align: justify;
   }
 
@@ -101,13 +99,14 @@
     justify-items: center;
     .title {
       display: inline-block;
+      align-self: center;
     }
     .picture-wall {
       .content {
         margin-bottom: 20px;
       }
       .picture-item {
-        margin-bottom: .3rem;
+        margin-bottom: .4rem;
         min-height: 2.78rem;
         background-color: #d8d8d8;
         border-radius: 8px;
