@@ -1,9 +1,88 @@
 .index {
 
   .section-wrapper {
+    position: relative;
     padding: 1rem 0;
+
+    .banner-site-name {
+      font-size: .1rem;
+      writing-mode: vertical-rl;
+      letter-spacing: .25rem;
+      transform: rotate(180deg);
+    }
+    .banner-icon {
+      position: absolute;
+      top: .9rem;
+      left: .2rem;
+      width: 4.2rem;
+      height: 3.86rem;
+      background-image: url('../assets/images/code.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .banner {
+      padding-top: .5rem;
+      z-index: 10;
+      .banner_title {
+        margin-top: .3rem;
+        font-size: .925rem;
+        font-weight: 600;
+        line-height: .65rem;
+        text-align: justify;
+      }
+
+      .banner_subtitle {
+        font-size: .5rem;
+        line-height: .36rem;
+        letter-spacing: .02rem;
+      }
+
+      .banner_slogan {
+        margin-top: .3rem;
+        font-size: .58rem;
+        line-height: .5rem;
+        text-align: justify;
+      }
+
+      .banner_info {
+        margin-top: .3rem;
+        font-size: .21rem;
+        line-height: .2rem;
+        text-align: justify;
+      }
+    }
+
   }
 
+  .introduction-and-vision {
+    margin: .5rem 0;
+    position: relative;
+
+    .icon-side {
+      position: absolute;
+      top: .2rem;
+      right: 0;
+      width: 6rem;
+      height: 7.02rem;
+      background-image: url('../assets/images/code_side.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .section-wrapper {
+      z-index: 10;
+    }
+
+    .vision-wrapper {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+
+      .title {
+        align-self: flex-end;
+      }
+    }
+  }
   .title {}
 
 
@@ -15,56 +94,6 @@
     text-align: justify;
   }
 
-  .banner-site-name {
-    font-size: .1rem;
-    writing-mode: vertical-rl;
-    letter-spacing: .25rem;
-    transform: rotate(180deg);
-  }
-
-    .banner {
-        padding-top: .5rem;
-
-        .banner_title {
-          margin-top: .3rem;
-          font-size: .925rem;
-          font-weight: 600;
-          line-height: .65rem;
-          text-align: justify;
-        }
-
-        .banner_subtitle {
-          font-size: .5rem;
-          line-height: .36rem;
-          letter-spacing: .02rem;
-        }
-
-        .banner_slogan {
-          margin-top: .3rem;
-          font-size: .58rem;
-          line-height: .5rem;
-          text-align: justify;
-        }
-
-        .banner_info {
-          margin-top: .3rem;
-          font-size: .21rem;
-          line-height: .2rem;
-          text-align: justify;
-        }
-  }
-
-  .introduction {
-  }
-
-  .vision-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    .title {
-      align-self: flex-end;
-    }
-  }
 
   .subjects-wrapper {
     display: flex;
@@ -74,6 +103,9 @@
       display: inline-block;
     }
     .picture-wall {
+      .content {
+        margin-bottom: 20px;
+      }
       .picture-item {
         margin-bottom: .3rem;
         min-height: 2.78rem;
