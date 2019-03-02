@@ -10,7 +10,7 @@ const $D = $(document),
 
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
-  let scrollScale = ((scrollT) / docH) * 100
+  let scrollScale = (scrollT / (docH - winH)) * 100
 
   console.log('scroll', scrollScale, scrollT);
   $scrollSlider.css('height', `${100 - scrollScale}%`)
