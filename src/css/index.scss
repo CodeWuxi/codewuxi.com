@@ -55,6 +55,21 @@
 
   }
 
+  .section-content {
+    display: flex;
+    flex-direction: column;
+
+    .photo-wall {
+      margin-top: .2rem;
+      .photo-item {
+        margin-bottom: .3rem;
+        height: 1rem;
+        background-color: #d8d8d8;
+        border-radius: 8px;
+      }
+    }
+  }
+
   .introduction-and-vision {
     margin: .5rem 0;
     position: relative;
@@ -75,13 +90,11 @@
 
     .vision-wrapper {
       margin-top: 1.25rem;
-      display: flex;
-      flex-direction: column;
       z-index: 10;
 
-      .title {
-        align-self: flex-end;
-      }
+      // .title {
+      //   align-self: flex-end;
+      // }
     }
   }
 
@@ -95,13 +108,8 @@
 
 
   .subjects-wrapper {
-    display: flex;
-    flex-direction: column;
     justify-items: center;
-    .title {
-      display: inline-block;
-      align-self: center;
-    }
+
     .picture-wall {
       .content {
         margin-bottom: 20px;
@@ -187,12 +195,12 @@
   }
 }
 
-.scroll-wrapper {
+.scroll-bar {
   position: fixed;
   right: 1.36rem;
-  top: 1rem;
+  top: 2rem;
   width: 0.03rem;
-  height: 6rem;
+  height: 4rem;
   background-color: #fff;
   border-radius: 0.045px;
 
