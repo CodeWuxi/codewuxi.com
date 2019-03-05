@@ -24,6 +24,9 @@ body {
     margin-top: .5rem;
     margin-bottom: .2rem;
     position: relative;
+    display: inline-block;
+    -ms-flex-item-align: center;
+        align-self: center;
     font-size: .48rem;
     line-height: .67rem;
     letter-spacing: .09rem; }
@@ -49,9 +52,10 @@ body {
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
-    letter-spacing: .4rem;
+    letter-spacing: 0.05rem;
     -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+            transform: rotate(180deg);
+    text-transform: uppercase; }
   .index .section-wrapper .banner-icon {
     position: absolute;
     top: .9rem;
@@ -68,22 +72,38 @@ body {
       margin-top: .3rem;
       font-size: 1rem;
       font-weight: 400;
-      line-height: 1rem;
+      line-height: 0.78rem;
       text-align: justify; }
     .index .section-wrapper .banner .banner_subtitle {
-      font-size: .5rem;
-      line-height: .36rem;
+      font-size: .6rem;
+      line-height: .5rem;
       letter-spacing: .02rem; }
     .index .section-wrapper .banner .banner_slogan {
       margin-top: .3rem;
-      font-size: .58rem;
-      line-height: .81rem;
+      font-size: .72rem;
+      line-height: .72rem;
       text-align: justify; }
     .index .section-wrapper .banner .banner_info {
       margin-top: .3rem;
-      font-size: .16rem;
+      font-size: .21rem;
       line-height: .22rem;
       text-align: justify; }
+
+.index .section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .index .section-content .photo-wall {
+    margin-top: .2rem; }
+    .index .section-content .photo-wall .photo-item {
+      margin-bottom: .3rem;
+      height: 1rem;
+      background-color: #d8d8d8;
+      border-radius: 8px; }
 
 .index .introduction-and-vision {
   margin: .5rem 0;
@@ -101,17 +121,7 @@ body {
     z-index: 10; }
   .index .introduction-and-vision .vision-wrapper {
     margin-top: 1.25rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     z-index: 10; }
-    .index .introduction-and-vision .vision-wrapper .title {
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
 
 .index .content {
   font-weight: 200;
@@ -121,18 +131,7 @@ body {
   text-align: justify; }
 
 .index .subjects-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   justify-items: center; }
-  .index .subjects-wrapper .title {
-    display: inline-block;
-    -ms-flex-item-align: center;
-        align-self: center; }
   .index .subjects-wrapper .picture-wall .content {
     margin-bottom: 20px; }
   .index .subjects-wrapper .picture-wall .picture-item {
@@ -145,7 +144,7 @@ body {
   min-height: 4rem; }
 
 .index .schedule-wrapper {
-  padding-left: 10%;
+  min-height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,4 +180,43 @@ body {
       .index .schedule-wrapper .schedule-list .schedule-item p {
         color: #aaa;
         font-size: .2rem; }
+
+.index .guests-wrapper {
+  min-height: 4rem; }
+
+.index .register-wrapper {
+  min-height: 4rem; }
+
+.index .sponsors-wrapper {
+  min-height: 4rem; }
+
+.index .partners-wrapper {
+  min-height: 4rem; }
+
+.index .media-wrapper {
+  min-height: 4rem; }
+
+.index .guide-wrapper {
+  min-height: 4rem; }
+
+.index .contact-wrapper {
+  min-height: 4rem; }
+
+.scroll-bar {
+  position: fixed;
+  right: 1.36rem;
+  top: 2rem;
+  width: 0.03rem;
+  height: 4rem;
+  background-color: #fff;
+  border-radius: 0.045px; }
+  .scroll-bar .scroll-slider {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 100%;
+    width: 0.06rem;
+    background-color: #fff; }
 
