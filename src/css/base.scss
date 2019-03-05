@@ -33,6 +33,8 @@ body {
     margin-top: .5rem;
     margin-bottom: .2rem;
     position: relative;
+    display: inline-block;
+    align-self: center;
     font-size: .48rem;
     line-height: .67rem;
     letter-spacing: .09rem;
@@ -47,6 +49,13 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
     }
+  }
+
+  .cw-sm-title {
+    margin-top: 0.32rem;
+    position: relative;
+    font-size: .32rem;
+    line-height: .64rem;
   }
 
   .cw-text-justify {
