@@ -1,82 +1,98 @@
-.index {
+.hack-2019-wrapper {
 
   .section-wrapper {
     position: relative;
     padding: 1rem 0;
 
-    .banner-site-name {
-      font-size: .2rem;
-      writing-mode: vertical-rl;
-      letter-spacing: 0.05rem;
-      transform: rotate(180deg);
-      text-transform:uppercase;
-    }
-    .banner-icon {
-      position: absolute;
-      top: .9rem;
-      left: .3rem;
-      width: 5.231rem;
-      height: 4.816rem;
-      background-image: url('../assets/images/code.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    .banner {
-      padding-top: .5rem;
-      z-index: 10;
-      .banner_title {
-        margin-top: .3rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 0.78rem;
+    .section-content {
+      display: flex;
+      flex-direction: column;
+
+      .text-content {
+        font-weight: 200;
+        font-size: .18rem;
+        line-height: .38rem;
+        letter-spacing: .04rem;
         text-align: justify;
       }
 
-      .banner_subtitle {
-        font-size: .6rem;
-        line-height: .5rem;
-        letter-spacing: .02rem;
-      }
+      .photo-wall {
+        margin-top: .2rem;
 
-      .banner_slogan {
-        margin-top: .3rem;
-        font-size: .72rem;
-        line-height: .72rem;
-        text-align: justify;
-      }
-
-      .banner_info {
-        margin-top: .3rem;
-        font-size: .21rem;
-        line-height: .22rem;
-        text-align: justify;
-      }
-    }
-
-  }
-
-  .section-content {
-    display: flex;
-    flex-direction: column;
-
-    .photo-wall {
-      margin-top: .2rem;
-      .photo-item {
-        margin-bottom: .3rem;
-        height: 1rem;
-        background-color: #d8d8d8;
-        border-radius: 8px;
+        .photo-item {
+          margin-bottom: .3rem;
+          height: 1rem;
+          background-color: #d8d8d8;
+          border-radius: 8px;
+        }
       }
     }
   }
 
-  .introduction-and-vision {
-    margin: .5rem 0;
-    position: relative;
+  .banner-wrapper {
+    .container {
+      position: relative;
 
+      .banner-site-name {
+        position: relative;
+        font-size: .2rem;
+        writing-mode: vertical-rl;
+        letter-spacing: 0.05rem;
+        transform: rotate(180deg);
+        text-transform: uppercase;
+        z-index: 10;
+      }
+
+      .banner-icon {
+        position: absolute;
+        top: -.3rem;
+        left: .5rem;
+        width: 5.231rem;
+        height: 4.816rem;
+        background-image: url('../assets/images/code.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .banner {
+        padding-top: .5rem;
+        z-index: 10;
+
+        .banner_title {
+          margin-top: .3rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 0.78rem;
+          text-align: justify;
+        }
+
+        .banner_subtitle {
+          font-size: .6rem;
+          line-height: .5rem;
+          letter-spacing: .02rem;
+        }
+
+        .banner_slogan {
+          margin-top: .3rem;
+          font-size: .72rem;
+          line-height: .72rem;
+          text-align: justify;
+        }
+
+        .banner_info {
+          margin-top: .3rem;
+          font-size: .21rem;
+          line-height: .22rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .introduction-wrapper {
     .icon-side {
       position: absolute;
-      top: .2rem;
+      top: .5rem;
       right: 0;
       width: 7.162rem;
       height: 8.41rem;
@@ -84,28 +100,7 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
-    .section-wrapper {
-      z-index: 10;
-    }
-
-    .vision-wrapper {
-      margin-top: 1.25rem;
-      z-index: 10;
-
-      // .title {
-      //   align-self: flex-end;
-      // }
-    }
   }
-
-  .content {
-    font-weight: 200;
-    font-size: .18rem;
-    line-height: .38rem;
-    letter-spacing: .04rem;
-    text-align: justify;
-  }
-
 
   .subjects-wrapper {
     justify-items: center;
@@ -114,6 +109,7 @@
       .content {
         margin-bottom: 20px;
       }
+
       .picture-item {
         margin-bottom: .4rem;
         min-height: 2.78rem;
@@ -123,29 +119,24 @@
     }
   }
 
-  .awards-wrapper {
-    min-height: 4rem;
-
-    .title {
-      display: inline-block;
-      align-self: center;
-    }
-  }
 
   .schedule-wrapper {
     min-height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .title-wrapper {
       .title {
         margin-bottom: .23rem;
         font-size: .36rem;
       }
+
       p {
         font-size: .15rem;
       }
     }
+
     .schedule-list {
       width: 40%;
       display: flex;
@@ -159,10 +150,12 @@
         &:first-child {
           margin-bottom: .4rem;
         }
+
         h5 {
           color: #0D253E;
           font-size: .3rem;
         }
+
         p {
           color: #aaa;
           font-size: .2rem;
@@ -171,36 +164,12 @@
     }
   }
 
-  .guests-wrapper {
-    min-height: 4rem;
-  }
-
-  .register-wrapper {
-    min-height: 4rem;
-  }
-
-  .sponsors-wrapper {
-    min-height: 4rem;
-  }
-
-  .partners-wrapper {
-    min-height: 4rem;
-  }
-
-  .media-wrapper {
-    min-height: 4rem;
-  }
-
   .guide-wrapper {
-    min-height: 4rem;
-    
-    .content {
-      text-align: center;
+    .section-content {
+      .text-content {
+        text-align: center;
+      }
     }
-  }
-
-  .contact-wrapper {
-    min-height: 4rem;
   }
 }
 
@@ -225,25 +194,25 @@
 }
 
 footer {
-    padding: 1rem 0 2rem 0;
+  padding: 1rem 0 2rem 0;
 
-    .footer-logo-wrapper {
-        .footer-logo {
-          text-align: center;
-        }
+  .footer-logo-wrapper {
+    .footer-logo {
+      text-align: center;
     }
-    
-    .footer-copyright-wrapper {
-        text-align: center;
-        font-size: 0.18rem;
-        font-weight: 300;
-    }
+  }
+
+  .footer-copyright-wrapper {
+    text-align: center;
+    font-size: 0.18rem;
+    font-weight: 300;
+  }
 }
 
 .path {
-//   stroke-dasharray: 50;
-//   stroke-dashoffset: 1000;
-//   animation: dash 10s linear forwards;
+  //   stroke-dasharray: 50;
+  //   stroke-dashoffset: 1000;
+  //   animation: dash 10s linear forwards;
 }
 
 @keyframes dash {

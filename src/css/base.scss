@@ -27,6 +27,18 @@ body {
 
   header {
     height: .8rem;
+
+    .container .row .col-xl-1 {
+      max-height: .8rem;
+    }
+    .icon-codewuxi {
+      display: inline-block;
+      width: 0.38rem;
+      height: 0.38rem;
+      background-image: url('../assets/images/codewuxi.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   .cw-title {
