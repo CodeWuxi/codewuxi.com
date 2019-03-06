@@ -2,12 +2,6 @@ html {
   font-size: 315%;
 }
 
-@media (min-width: 1200px) {
-  html {
-    font-size: 625%;
-  }
-}
-
 body {
   background-color: #000;
   color: #fff;
@@ -23,6 +17,232 @@ body {
   ul, li {
     list-style: none;
     padding: 0;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  header {
+    height: .8rem;
+
+    .container .row .col-xl-1 {
+      max-height: .8rem;
+    }
+    .icon-codewuxi {
+      display: inline-block;
+      width: 0.38rem;
+      height: 0.38rem;
+      background-image: url('../assets/images/codewuxi.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .4rem;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    font-size: .56rem;
+    line-height: .75rem;
+    letter-spacing: .09rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-sm-title {
+    margin-top: 0.32rem;
+    position: relative;
+    font-size: .42rem;
+    font-weight: 600;
+    line-height: .72rem;
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header {
+    height: .8rem;
+
+    .container .row .col-xl-1 {
+      max-height: .8rem;
+    }
+    .icon-codewuxi {
+      display: inline-block;
+      width: 0.38rem;
+      height: 0.38rem;
+      background-image: url('../assets/images/codewuxi.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .4rem;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    font-size: .72rem;
+    line-height: .75rem;
+    letter-spacing: .09rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-sm-title {
+    margin-top: 0.32rem;
+    position: relative;
+    font-size: .42rem;
+    font-weight: 600;
+    line-height: .72rem;
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    height: .8rem;
+
+    .container .row .col-xl-1 {
+      max-height: .8rem;
+    }
+    .icon-codewuxi {
+      display: inline-block;
+      width: 0.38rem;
+      height: 0.38rem;
+      background-image: url('../assets/images/codewuxi.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .4rem;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    font-size: .72rem;
+    line-height: .75rem;
+    letter-spacing: .09rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-sm-title {
+    margin-top: 0.32rem;
+    position: relative;
+    font-size: .42rem;
+    font-weight: 600;
+    line-height: .72rem;
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html {
+    font-size: 625%;
+  }
+
+  header {
+    height: .8rem;
+
+    .container .row .col-xl-1 {
+      max-height: .8rem;
+    }
+    .icon-codewuxi {
+      display: inline-block;
+      width: 0.38rem;
+      height: 0.38rem;
+      background-image: url('../assets/images/codewuxi.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-title {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    font-size: .54rem;
+    line-height: .67rem;
+    letter-spacing: .09rem;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.08rem;
+      left: -.2rem;
+      width: .17rem;
+      height: .17rem;
+      background-image: url('../assets/images/title.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .cw-sm-title {
+    margin-top: 0.32rem;
+    position: relative;
+    font-size: .36rem;
+    line-height: .64rem;
+  }
+
+  .cw-text-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  html {
+    font-size: 625%;
   }
 
   header {
