@@ -4,18 +4,24 @@
 
     .section-wrapper {
       position: relative;
-      padding: 1rem 0;
+      margin: 1rem 0;
   
       .section-content {
         display: flex;
         flex-direction: column;
   
         .text-content {
+          color: rgba(255,255,255,.72);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
           letter-spacing: .032rem;
           text-align: justify;
+
+          p {
+            margin: .27rem 0;
+            font-weight: 200;
+          }
         }
   
         .photo-wall {
@@ -57,32 +63,34 @@
         }
   
         .banner {
+          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
   
           .banner_title {
             margin-top: .3rem;
-            font-size: .78rem;
-            font-weight: 400;
-            line-height: 0.78rem;
+            font-size: .72rem;
+            font-weight: 600;
+            line-height: 0.60rem;
             text-align: justify;
           }
   
           .banner_subtitle {
-            font-size: .6rem;
-            line-height: .5rem;
-            letter-spacing: .02rem;
+            font-size: .5rem;
+            line-height: .45rem;
+            letter-spacing: .01rem;
           }
   
           .banner_slogan {
-            margin-top: .36rem;
-            font-size: .72rem;
-            line-height: .72rem;
+            margin-top: .3rem;
+            font-size: .6rem;
+            font-weight: 600;
+            line-height: .6rem;
             text-align: justify;
           }
   
           .banner_info {
-            margin-top: .36rem;
+            margin-top: .3rem;
             font-size: .32rem;
             line-height: .32rem;
             text-align: justify;
@@ -120,8 +128,7 @@
         }
       }
     }
-  
-  
+
     .schedule-wrapper {
       min-height: 4rem;
       display: flex;
@@ -162,6 +169,33 @@
             color: #aaa;
             font-size: .2rem;
           }
+        }
+      }
+    }
+
+    .register-wrapper {
+
+      .register-main {
+        margin: .18rem 0;
+
+        h5.text-title {
+          margin: .32rem 0;
+          font-size: .32rem;
+          font-weight: 400;
+        }
+
+        p.register-guide-title {
+          margin: .40rem 0 !important;
+          color: #fff;
+          font-size: .40rem;
+          line-height: .32rem;
+        }
+
+        p {
+          margin: .14rem 0 !important;
+          font-size: .28rem;
+          line-height: .48rem;
+          letter-spacing: .032rem;
         }
       }
     }
@@ -219,18 +253,24 @@
 
     .section-wrapper {
       position: relative;
-      padding: 1rem 0;
+      margin: 1rem 0;
   
       .section-content {
         display: flex;
         flex-direction: column;
   
         .text-content {
+          color: rgba(255,255,255,.72);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
           letter-spacing: .032rem;
           text-align: justify;
+
+          p {
+            margin: .27rem 0;
+            font-weight: 200;
+          }
         }
   
         .photo-wall {
@@ -272,26 +312,28 @@
         }
   
         .banner {
+          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
   
           .banner_title {
             margin-top: .3rem;
-            font-size: 1.14rem;
-            font-weight: 400;
-            line-height: .98rem;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: .86rem;
             text-align: justify;
           }
   
           .banner_subtitle {
             font-size: .68rem;
-            line-height: .62rem;
+            line-height: .6rem;
             letter-spacing: .02rem;
           }
   
           .banner_slogan {
             margin-top: .36rem;
             font-size: .72rem;
+            font-weight: 600;
             line-height: .72rem;
             text-align: justify;
           }
@@ -335,8 +377,7 @@
         }
       }
     }
-  
-  
+
     .schedule-wrapper {
       min-height: 4rem;
       display: flex;
@@ -377,6 +418,33 @@
             color: #aaa;
             font-size: .2rem;
           }
+        }
+      }
+    }
+
+    .register-wrapper {
+
+      .register-main {
+        margin: .18rem 0;
+
+        h5.text-title {
+          margin: .32rem 0;
+          font-size: .32rem;
+          font-weight: 400;
+        }
+
+        p.register-guide-title {
+          margin: .4rem 0 !important;
+          color: #fff;
+          font-size: .4rem;
+          line-height: .4rem;
+        }
+
+        p {
+          margin: .14rem 0 !important;
+          font-size: .28rem;
+          line-height: .48rem;
+          letter-spacing: .032rem;
         }
       }
     }
@@ -433,18 +501,24 @@
 
     .section-wrapper {
       position: relative;
-      padding: 1rem 0;
+      margin: 1rem 0;
   
       .section-content {
         display: flex;
         flex-direction: column;
   
         .text-content {
+          color: rgba(255,255,255,.72);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
           letter-spacing: .032rem;
           text-align: justify;
+
+          p {
+            margin: .27rem 0;
+            font-weight: 200;
+          }
         }
   
         .photo-wall {
@@ -486,20 +560,21 @@
         }
   
         .banner {
+          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
   
           .banner_title {
             margin-top: .3rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 400;
-            line-height: .98rem;
+            line-height: .9rem;
             text-align: justify;
           }
   
           .banner_subtitle {
-            font-size: .68rem;
-            line-height: .62rem;
+            font-size: .64rem;
+            line-height: .56rem;
             letter-spacing: .02rem;
           }
   
@@ -549,8 +624,7 @@
         }
       }
     }
-  
-  
+
     .schedule-wrapper {
       min-height: 4rem;
       display: flex;
@@ -591,6 +665,33 @@
             color: #aaa;
             font-size: .2rem;
           }
+        }
+      }
+    }
+
+    .register-wrapper {
+
+      .register-main {
+        margin: .18rem 0;
+
+        h5.text-title {
+          margin: .32rem 0;
+          font-size: .32rem;
+          font-weight: 400;
+        }
+
+        p.register-guide-title {
+          margin: .4rem 0 !important;
+          color: #fff;
+          font-size: .4rem;
+          line-height: .4rem;
+        }
+
+        p {
+          margin: .14rem 0 !important;
+          font-size: .28rem;
+          line-height: .48rem;
+          letter-spacing: .032rem;
         }
       }
     }
@@ -648,18 +749,24 @@
 
     .section-wrapper {
       position: relative;
-      padding: 1rem 0;
+      margin: 1rem 0;
   
       .section-content {
         display: flex;
         flex-direction: column;
   
         .text-content {
+          color: rgba(255,255,255,.72);
           font-weight: 200;
           font-size: .21rem;
           line-height: .42rem;
           letter-spacing: .04rem;
           text-align: justify;
+
+          p {
+            margin: .27rem 0;
+            font-weight: 200;
+          }
         }
   
         .photo-wall {
@@ -701,6 +808,7 @@
         }
   
         .banner {
+          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
   
@@ -764,8 +872,7 @@
         }
       }
     }
-  
-  
+
     .schedule-wrapper {
       min-height: 4rem;
       display: flex;
@@ -806,6 +913,33 @@
             color: #aaa;
             font-size: .2rem;
           }
+        }
+      }
+    }
+
+    .register-wrapper {
+
+      .register-main {
+        margin: .18rem 0;
+
+        h5.text-title {
+          margin: .14rem 0;
+          font-size: .18rem;
+          font-weight: 400;
+        }
+
+        p.register-guide-title {
+          margin: 0 0 .32rem 0 !important;
+          color: #fff;
+          font-size: .32rem;
+          line-height: .32rem;
+        }
+
+        p {
+          margin: .14rem 0 !important;
+          font-size: .14rem;
+          line-height: .24rem;
+          letter-spacing: 0.014rem;
         }
       }
     }
@@ -862,22 +996,28 @@
 
     .section-wrapper {
       position: relative;
-      padding: 1rem 0;
+      margin: 1rem 0;
   
       .section-content {
         display: flex;
         flex-direction: column;
   
         .text-content {
+          color: rgba(255,255,255,.72);
           font-weight: 200;
           font-size: .18rem;
-          line-height: .38rem;
-          letter-spacing: .04rem;
+          line-height: .36rem;
+          letter-spacing: .027rem;
           text-align: justify;
+
+          p {
+            margin: .27rem 0;
+            font-weight: 200;
+          }
         }
   
         .photo-wall {
-          margin-top: .2rem;
+          margin: .18rem 0;
   
           .photo-item {
             margin-bottom: .3rem;
@@ -915,34 +1055,36 @@
         }
   
         .banner {
+          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
   
           .banner_title {
             margin-top: .3rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 0.78rem;
+            font-size: .9rem;
+            font-weight: 600;
+            line-height: 0.72rem;
             text-align: justify;
           }
   
           .banner_subtitle {
-            font-size: .6rem;
-            line-height: .5rem;
+            font-size: .52rem;
+            line-height: .42rem;
             letter-spacing: .02rem;
           }
   
           .banner_slogan {
             margin-top: .3rem;
-            font-size: .72rem;
+            font-size: .75rem;
+            font-weight: 600;
             line-height: .72rem;
             text-align: justify;
           }
   
           .banner_info {
             margin-top: .3rem;
-            font-size: .21rem;
-            line-height: .22rem;
+            font-size: .24rem;
+            line-height: .24rem;
             text-align: justify;
           }
         }
@@ -978,8 +1120,7 @@
         }
       }
     }
-  
-  
+
     .schedule-wrapper {
       min-height: 4rem;
       display: flex;
@@ -1020,6 +1161,33 @@
             color: #aaa;
             font-size: .2rem;
           }
+        }
+      }
+    }
+
+    .register-wrapper {
+
+      .register-main {
+        margin: .18rem 0;
+
+        h5.text-title {
+          margin: .14rem 0;
+          font-size: .18rem;
+          font-weight: 400;
+        }
+
+        p.register-guide-title {
+          margin: 0 0 .32rem 0 !important;
+          color: #fff;
+          font-size: .32rem;
+          line-height: .32rem;
+        }
+
+        p {
+          margin: .14rem 0 !important;
+          font-size: .14rem;
+          line-height: .24rem;
+          letter-spacing: 0.014rem;
         }
       }
     }
