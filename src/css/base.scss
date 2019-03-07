@@ -5,7 +5,8 @@ html {
 body {
   background-color: #000;
   color: #fff;
-  font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  // font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  font-family: -apple-system-font, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -39,21 +40,22 @@ body {
   }
 
   .cw-title {
-    margin-top: .5rem;
-    margin-bottom: .4rem;
+    margin-top: .3rem;
+    margin-bottom: 0rem;
     position: relative;
     display: inline-block;
     align-self: center;
+    color: #fff;
     font-size: .56rem;
     line-height: .75rem;
     letter-spacing: .09rem;
     &:after {
       content: '';
       position: absolute;
-      top: -.08rem;
-      left: -.2rem;
-      width: .17rem;
-      height: .17rem;
+      top: -.24rem;
+      left: -.6rem;
+      width: .51rem;
+      height: .51rem;
       background-image: url('../assets/images/title.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -63,6 +65,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
@@ -71,6 +74,12 @@ body {
   .cw-text-justify {
     text-align: justify;
     text-align-last: justify;
+    // &:after{
+    //   content: '';
+    //   display: inline-block;
+    //   height:0;
+    //   width: 100%;
+    // }
   }
 }
 
@@ -117,6 +126,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
@@ -171,6 +181,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
@@ -229,6 +240,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .36rem;
     line-height: .64rem;
   }
@@ -263,7 +275,7 @@ body {
 
   .cw-title {
     margin-top: .5rem;
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
     position: relative;
     display: inline-block;
     align-self: center;
@@ -286,6 +298,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .32rem;
     line-height: .64rem;
   }
