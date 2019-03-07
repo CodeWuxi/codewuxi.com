@@ -1,11 +1,10 @@
-@charset "UTF-8";
 html {
   font-size: 315%; }
 
 body {
   background-color: #000;
   color: #fff;
-  font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
+  font-family: -apple-system-font, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale; }
   body h1, body h2, body h3, body h4, body h5, body h6, body p {
@@ -28,28 +27,30 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
   .cw-title {
-    margin-top: .5rem;
-    margin-bottom: .4rem;
+    margin-top: .3rem;
+    margin-bottom: 0rem;
     position: relative;
     display: inline-block;
     -ms-flex-item-align: center;
         align-self: center;
+    color: #fff;
     font-size: .56rem;
     line-height: .75rem;
     letter-spacing: .09rem; }
     .cw-title:after {
       content: '';
       position: absolute;
-      top: -.08rem;
-      left: -.2rem;
-      width: .17rem;
-      height: .17rem;
+      top: -.24rem;
+      left: -.6rem;
+      width: .51rem;
+      height: .51rem;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAACIUlEQVRYR+2XO4jVUBCGv1/BTvGFKPgolG0sfCBiI26jIIpoI1gKriIWgo1WirqF21itheKj0C2sLQQVtLTYXgu1cMFGfFvZ/DJwLlxikpt4T3YXdOAQkhNmvjMzmZmIeSLqksP2fuBmsnFK0uMqe12DvAfWJeMzktb/8yARmnvJC8fnLDQBYPtSXCVdrsvHTnPkP0iZ62clNLYlyXWxny2Qq8A54FPf+ly4HwW+AzfS8y3A9WKRGypZbT8DJoFpYEXF2gMsAT6m/U3AgmKR+2sQ2wuBOP0GSV+rwlMMje3SajsMyFZgStLmNjlS1X+GATkNbJc01gakttfYXgRcAU6mF28BFyX9qnH5feC5pLs5Qa4B5wsKJyRdqAF5AxyU9DonSCTdsoLCL5KWVxSpVcArYGXWOmK7DOSbpKUVIIeBMUkHBg1WrQqa7bLQ/ATis3zRW5LepkY2AfyQNJ4bpDRZ03QVlbG3wm6A7QDGJU1lBRmkrLdveyOwL1XTD+n5Hx7r19cqNE1BUlh2xkAsaVsCK/NYD26kswnN9llgRNKZ4gFKwNYA0QpC8g7Pth8CjyQ9GORJ2zPA2q5AommNSnrXAKSb/xrbcbppSasHQbTdb9X0bB8Fjkk60tbQoPcbgdiOP7Q7wG4gesshSRGibNIU5Amwt8/qU0lRT7JJU5CYORf3WY3yHuNfNmkKMm88EjlyG9gFvAROzEmOZPN/jaLfn8oUMtn2t30AAAAASUVORK5CYII=);
       background-repeat: no-repeat;
       background-size: contain; }
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem; }
@@ -92,6 +93,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem; }
@@ -134,6 +136,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem; }
@@ -178,6 +181,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .36rem;
     line-height: .64rem; }
   .cw-text-justify {
@@ -200,7 +204,7 @@ body {
       background-size: contain; }
   .cw-title {
     margin-top: .5rem;
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
     position: relative;
     display: inline-block;
     -ms-flex-item-align: center;
@@ -221,6 +225,7 @@ body {
   .cw-sm-title {
     margin-top: 0.32rem;
     position: relative;
+    color: #fff;
     font-size: .32rem;
     line-height: .64rem; }
   .cw-text-justify {
@@ -230,7 +235,7 @@ body {
 @media (max-width: 575.98px) {
   .hack-2019-wrapper .section-wrapper {
     position: relative;
-    padding: 1rem 0; }
+    margin: 1rem 0; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -240,11 +245,15 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .hack-2019-wrapper .section-wrapper .section-content .text-content {
+        color: rgba(255, 255, 255, 0.72);
         font-weight: 200;
         font-size: .28rem;
         line-height: .48rem;
         letter-spacing: .032rem;
         text-align: justify; }
+        .hack-2019-wrapper .section-wrapper .section-content .text-content p {
+          margin: .27rem 0;
+          font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
         margin-top: .2rem; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
@@ -275,25 +284,27 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
     .hack-2019-wrapper .banner-wrapper .container .banner {
+      font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       padding-top: .5rem;
       z-index: 10; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_title {
         margin-top: .3rem;
-        font-size: .78rem;
-        font-weight: 400;
-        line-height: 0.78rem;
+        font-size: .72rem;
+        font-weight: 600;
+        line-height: 0.60rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_subtitle {
-        font-size: .6rem;
-        line-height: .5rem;
-        letter-spacing: .02rem; }
+        font-size: .5rem;
+        line-height: .45rem;
+        letter-spacing: .01rem; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_slogan {
-        margin-top: .36rem;
-        font-size: .72rem;
-        line-height: .72rem;
+        margin-top: .3rem;
+        font-size: .6rem;
+        font-weight: 600;
+        line-height: .6rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_info {
-        margin-top: .36rem;
+        margin-top: .3rem;
         font-size: .32rem;
         line-height: .32rem;
         text-align: justify; }
@@ -352,6 +363,22 @@ body {
         .hack-2019-wrapper .schedule-wrapper .schedule-list .schedule-item p {
           color: #aaa;
           font-size: .2rem; }
+  .hack-2019-wrapper .register-wrapper .register-main {
+    margin: .18rem 0; }
+    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
+      margin: .32rem 0;
+      font-size: .32rem;
+      font-weight: 400; }
+    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
+      margin: .40rem 0 !important;
+      color: #fff;
+      font-size: .40rem;
+      line-height: .32rem; }
+    .hack-2019-wrapper .register-wrapper .register-main p {
+      margin: .14rem 0 !important;
+      font-size: .28rem;
+      line-height: .48rem;
+      letter-spacing: .032rem; }
   .hack-2019-wrapper .guide-wrapper .section-content .text-content {
     text-align: center; }
   .scroll-bar {
@@ -384,7 +411,7 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .hack-2019-wrapper .section-wrapper {
     position: relative;
-    padding: 1rem 0; }
+    margin: 1rem 0; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -394,11 +421,15 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .hack-2019-wrapper .section-wrapper .section-content .text-content {
+        color: rgba(255, 255, 255, 0.72);
         font-weight: 200;
         font-size: .28rem;
         line-height: .48rem;
         letter-spacing: .032rem;
         text-align: justify; }
+        .hack-2019-wrapper .section-wrapper .section-content .text-content p {
+          margin: .27rem 0;
+          font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
         margin-top: .2rem; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
@@ -429,21 +460,23 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
     .hack-2019-wrapper .banner-wrapper .container .banner {
+      font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       padding-top: .5rem;
       z-index: 10; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_title {
         margin-top: .3rem;
-        font-size: 1.14rem;
-        font-weight: 400;
-        line-height: .98rem;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: .86rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_subtitle {
         font-size: .68rem;
-        line-height: .62rem;
+        line-height: .6rem;
         letter-spacing: .02rem; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_slogan {
         margin-top: .36rem;
         font-size: .72rem;
+        font-weight: 600;
         line-height: .72rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_info {
@@ -506,6 +539,22 @@ body {
         .hack-2019-wrapper .schedule-wrapper .schedule-list .schedule-item p {
           color: #aaa;
           font-size: .2rem; }
+  .hack-2019-wrapper .register-wrapper .register-main {
+    margin: .18rem 0; }
+    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
+      margin: .32rem 0;
+      font-size: .32rem;
+      font-weight: 400; }
+    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
+      margin: .4rem 0 !important;
+      color: #fff;
+      font-size: .4rem;
+      line-height: .4rem; }
+    .hack-2019-wrapper .register-wrapper .register-main p {
+      margin: .14rem 0 !important;
+      font-size: .28rem;
+      line-height: .48rem;
+      letter-spacing: .032rem; }
   .hack-2019-wrapper .guide-wrapper .section-content .text-content {
     text-align: center; }
   .scroll-bar {
@@ -537,7 +586,7 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hack-2019-wrapper .section-wrapper {
     position: relative;
-    padding: 1rem 0; }
+    margin: 1rem 0; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -547,11 +596,15 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .hack-2019-wrapper .section-wrapper .section-content .text-content {
+        color: rgba(255, 255, 255, 0.72);
         font-weight: 200;
         font-size: .28rem;
         line-height: .48rem;
         letter-spacing: .032rem;
         text-align: justify; }
+        .hack-2019-wrapper .section-wrapper .section-content .text-content p {
+          margin: .27rem 0;
+          font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
         margin-top: .2rem; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
@@ -582,17 +635,18 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
     .hack-2019-wrapper .banner-wrapper .container .banner {
+      font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       padding-top: .5rem;
       z-index: 10; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_title {
         margin-top: .3rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 400;
-        line-height: .98rem;
+        line-height: .9rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_subtitle {
-        font-size: .68rem;
-        line-height: .62rem;
+        font-size: .64rem;
+        line-height: .56rem;
         letter-spacing: .02rem; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_slogan {
         margin-top: .36rem;
@@ -659,6 +713,22 @@ body {
         .hack-2019-wrapper .schedule-wrapper .schedule-list .schedule-item p {
           color: #aaa;
           font-size: .2rem; }
+  .hack-2019-wrapper .register-wrapper .register-main {
+    margin: .18rem 0; }
+    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
+      margin: .32rem 0;
+      font-size: .32rem;
+      font-weight: 400; }
+    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
+      margin: .4rem 0 !important;
+      color: #fff;
+      font-size: .4rem;
+      line-height: .4rem; }
+    .hack-2019-wrapper .register-wrapper .register-main p {
+      margin: .14rem 0 !important;
+      font-size: .28rem;
+      line-height: .48rem;
+      letter-spacing: .032rem; }
   .hack-2019-wrapper .guide-wrapper .section-content .text-content {
     text-align: center; }
   .scroll-bar {
@@ -691,7 +761,7 @@ body {
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .hack-2019-wrapper .section-wrapper {
     position: relative;
-    padding: 1rem 0; }
+    margin: 1rem 0; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -701,11 +771,15 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .hack-2019-wrapper .section-wrapper .section-content .text-content {
+        color: rgba(255, 255, 255, 0.72);
         font-weight: 200;
         font-size: .21rem;
         line-height: .42rem;
         letter-spacing: .04rem;
         text-align: justify; }
+        .hack-2019-wrapper .section-wrapper .section-content .text-content p {
+          margin: .27rem 0;
+          font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
         margin-top: .2rem; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
@@ -736,6 +810,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
     .hack-2019-wrapper .banner-wrapper .container .banner {
+      font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       padding-top: .5rem;
       z-index: 10; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_title {
@@ -813,6 +888,22 @@ body {
         .hack-2019-wrapper .schedule-wrapper .schedule-list .schedule-item p {
           color: #aaa;
           font-size: .2rem; }
+  .hack-2019-wrapper .register-wrapper .register-main {
+    margin: .18rem 0; }
+    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
+      margin: .14rem 0;
+      font-size: .18rem;
+      font-weight: 400; }
+    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
+      margin: 0 0 .32rem 0 !important;
+      color: #fff;
+      font-size: .32rem;
+      line-height: .32rem; }
+    .hack-2019-wrapper .register-wrapper .register-main p {
+      margin: .14rem 0 !important;
+      font-size: .14rem;
+      line-height: .24rem;
+      letter-spacing: 0.014rem; }
   .hack-2019-wrapper .guide-wrapper .section-content .text-content {
     text-align: center; }
   .scroll-bar {
@@ -844,7 +935,7 @@ body {
 @media (min-width: 1200px) {
   .hack-2019-wrapper .section-wrapper {
     position: relative;
-    padding: 1rem 0; }
+    margin: 1rem 0; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -854,13 +945,17 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .hack-2019-wrapper .section-wrapper .section-content .text-content {
+        color: rgba(255, 255, 255, 0.72);
         font-weight: 200;
         font-size: .18rem;
-        line-height: .38rem;
-        letter-spacing: .04rem;
+        line-height: .36rem;
+        letter-spacing: .027rem;
         text-align: justify; }
+        .hack-2019-wrapper .section-wrapper .section-content .text-content p {
+          margin: .27rem 0;
+          font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
-        margin-top: .2rem; }
+        margin: .18rem 0; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
           margin-bottom: .3rem;
           height: 1rem;
@@ -889,27 +984,29 @@ body {
       background-repeat: no-repeat;
       background-size: contain; }
     .hack-2019-wrapper .banner-wrapper .container .banner {
+      font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       padding-top: .5rem;
       z-index: 10; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_title {
         margin-top: .3rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 0.78rem;
+        font-size: .9rem;
+        font-weight: 600;
+        line-height: 0.72rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_subtitle {
-        font-size: .6rem;
-        line-height: .5rem;
+        font-size: .52rem;
+        line-height: .42rem;
         letter-spacing: .02rem; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_slogan {
         margin-top: .3rem;
-        font-size: .72rem;
+        font-size: .75rem;
+        font-weight: 600;
         line-height: .72rem;
         text-align: justify; }
       .hack-2019-wrapper .banner-wrapper .container .banner .banner_info {
         margin-top: .3rem;
-        font-size: .21rem;
-        line-height: .22rem;
+        font-size: .24rem;
+        line-height: .24rem;
         text-align: justify; }
   .hack-2019-wrapper .introduction-wrapper .icon-side {
     position: absolute;
@@ -966,6 +1063,22 @@ body {
         .hack-2019-wrapper .schedule-wrapper .schedule-list .schedule-item p {
           color: #aaa;
           font-size: .2rem; }
+  .hack-2019-wrapper .register-wrapper .register-main {
+    margin: .18rem 0; }
+    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
+      margin: .14rem 0;
+      font-size: .18rem;
+      font-weight: 400; }
+    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
+      margin: 0 0 .32rem 0 !important;
+      color: #fff;
+      font-size: .32rem;
+      line-height: .32rem; }
+    .hack-2019-wrapper .register-wrapper .register-main p {
+      margin: .14rem 0 !important;
+      font-size: .14rem;
+      line-height: .24rem;
+      letter-spacing: 0.014rem; }
   .hack-2019-wrapper .guide-wrapper .section-content .text-content {
     text-align: center; }
   .scroll-bar {
