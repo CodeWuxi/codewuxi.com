@@ -14,8 +14,8 @@ const setScrollReveal = () => {
 
   sr.reveal('.section-content', {
     delay: 200,
-    distance: '150px',
-    duration: 800,
+    distance: '100px',
+    duration: 500,
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
     interval: 0,
     opacity: 0,
@@ -25,13 +25,13 @@ const setScrollReveal = () => {
         y: 0,
         z: 0,
     },
-    scale: 1.2,
+    scale: 1,
     cleanup: false,
     desktop: true,
     mobile: true,
     reset: false,
     useDelay: 'always',
-    viewFactor: 0.2,
+    viewFactor: 0.4,
     viewOffset: {
         top: 0,
         right: 0,
