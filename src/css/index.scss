@@ -1,3 +1,15 @@
+.footer-copyright-wrapper {
+  color: rgba(255,255,255,.72);
+  a {
+    color: rgba(255,255,255,.72);
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .hack-2019-wrapper {
