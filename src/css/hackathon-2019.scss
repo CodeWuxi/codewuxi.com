@@ -1,5 +1,14 @@
 @import './base.scss';
 
+.line {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  width: 1px;
+  height: 50px;
+  background-color: #fff;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .hack-2019-wrapper {
