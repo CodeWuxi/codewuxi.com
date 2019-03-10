@@ -13,7 +13,7 @@
         flex-direction: column;
 
         .text-content {
-          color: rgba(255,255,255,.72);
+          color: rgba(255,255,255,1);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
@@ -253,9 +253,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   .hack-2019-wrapper {
 
-  .banner-wrapper {
-    height: 100vh;
-    .container {
+    .section-wrapper {
       position: relative;
       margin: 1rem 0;
 
@@ -264,7 +262,7 @@
         flex-direction: column;
 
         .text-content {
-          color: rgba(255,255,255,.72);
+          color: rgba(255,255,255,1);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
@@ -512,7 +510,7 @@
         flex-direction: column;
 
         .text-content {
-          color: rgba(255,255,255,.72);
+          color: rgba(255,255,255,1);
           font-weight: 200;
           font-size: .28rem;
           line-height: .48rem;
@@ -730,7 +728,21 @@
     }
   }
 
+  footer {
+    padding: 1rem 0;
 
+    .footer-logo-wrapper {
+      .footer-logo {
+        text-align: center;
+      }
+    }
+
+    .footer-copyright-wrapper {
+      text-align: center;
+      font-size: 0.28rem;
+      font-weight: 300;
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -746,7 +758,7 @@
         flex-direction: column;
 
         .text-content {
-          color: rgba(255,255,255,.72);
+          color: rgba(255,255,255,1);
           font-weight: 200;
           font-size: .21rem;
           line-height: .42rem;
@@ -993,11 +1005,11 @@
         flex-direction: column;
 
         .text-content {
-          color: rgba(255,255,255,.72);
+          color: rgba(255,255,255,1);
           font-weight: 200;
-          font-size: .18rem;
-          line-height: .36rem;
-          letter-spacing: .027rem;
+          font-size: .24rem;
+          line-height: .48rem;
+          letter-spacing: .03rem;
           text-align: justify;
 
           p {

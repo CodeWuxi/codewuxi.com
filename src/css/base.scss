@@ -73,6 +73,14 @@ body {
     text-align: justify;
     text-align-last: justify;
   }
+
+  .cw-text-center {
+    text-align: center !important;
+  }
+
+  .cw-text-large {
+    font-size: .36rem !important;
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)

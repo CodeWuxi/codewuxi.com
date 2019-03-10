@@ -1,5 +1,5 @@
 // import '../css/base.scss'
-import '../css/index.scss'
+import '../css/hackathon-2019.scss'
 
 const $D = $(document)
 const $W = $(window)
