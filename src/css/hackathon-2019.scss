@@ -1,5 +1,27 @@
 @import './base.scss';
 
+.hack-2019-wrapper {
+
+  .hack-col-title {
+    position: fixed;
+    top: 1.5rem;
+    left: 1rem;
+    font-size: .2rem;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.05rem;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  .banner-wrapper {
+    margin: 0 !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .hack-2019-wrapper {
@@ -44,13 +66,7 @@
         position: relative;
 
         .banner-site-name {
-          position: relative;
-          font-size: .2rem;
-          writing-mode: vertical-rl;
-          letter-spacing: 0.05rem;
-          transform: rotate(180deg);
-          text-transform: uppercase;
-          z-index: 10;
+
         }
 
         .banner-icon {
@@ -66,7 +82,6 @@
 
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          padding-top: .5rem;
           z-index: 10;
 
           .banner_title {
@@ -315,7 +330,6 @@
 
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          padding-top: .5rem;
           z-index: 10;
 
           .banner_title {
@@ -563,7 +577,6 @@
 
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          padding-top: .5rem;
           z-index: 10;
 
           .banner_title {
@@ -811,7 +824,6 @@
 
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          padding-top: .5rem;
           z-index: 10;
 
           .banner_title {
@@ -999,7 +1011,6 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-
       .section-content {
         display: flex;
         flex-direction: column;
@@ -1035,16 +1046,6 @@
       .container {
         position: relative;
 
-        .banner-site-name {
-          position: relative;
-          font-size: .2rem;
-          writing-mode: vertical-rl;
-          letter-spacing: 0.05rem;
-          transform: rotate(180deg);
-          text-transform: uppercase;
-          z-index: 10;
-        }
-
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -1058,7 +1059,6 @@
 
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          padding-top: .5rem;
           z-index: 10;
 
           .banner_title {
@@ -1207,7 +1207,7 @@
     position: fixed;
     right: 1.36rem;
     top: 2rem;
-    width: 0.03rem;
+    width: 0.02rem;
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
