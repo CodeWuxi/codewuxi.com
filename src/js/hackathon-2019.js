@@ -3,9 +3,12 @@ import '../css/hackathon-2019.scss'
 
 const $D = $(document)
 const $W = $(window)
+const $body = $('body')
 const $scrollBar = $('.scroll-bar')
 const $scrollSlider = $('.scroll-slider')
+const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
+const $bannerWrap = $('.banner-wrapper .container')
 const docH = $D.outerHeight(true)
 const winH = $W.height()
 
@@ -40,7 +43,7 @@ const setScrollReveal = () => {
     }
   })
 }
-
+console.log($bannerWrap);
 const setTextLogoAnime = () => {
   anime({
     targets: 'path',
@@ -63,6 +66,23 @@ init()
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
   let scrollScale = (scrollT / (docH - winH)) * 100
+
+  if (!$body.hasClass('body-white') && scrollT > (winH / 2)) {
+    console.log('变色！');
+    $body.removeClass('body-home').addClass('body-white')
+    $colTitle.addClass('turn-black')
+    $scrollBar.addClass('turn-black')
+    $bannerWrap.animate({
+      opacity: 0
+    })
+  } else if (!$body.hasClass('body-home') && scrollT <= (winH / 2)) {
+    $body.removeClass('body-white').addClass('body-home')
+    $colTitle.removeClass('turn-black')
+    $scrollBar.removeClass('turn-black')
+    $bannerWrap.animate({
+      opacity: 1
+    })
+  }
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
 })
