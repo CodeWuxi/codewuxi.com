@@ -2,6 +2,15 @@
 
 .hack-2019-wrapper {
 
+  .line {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: 1px;
+    height: 2.5rem;
+    background-color: #fff;
+  }
+
   .hack-col-title {
     position: fixed;
     top: 1.5rem;
@@ -1007,6 +1016,10 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .hack-2019-wrapper {
+
+    .transition-wrapper {
+      height: 2.5rem;
+    }
 
     .section-wrapper {
       position: relative;
