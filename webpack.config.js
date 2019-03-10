@@ -7,7 +7,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    'index': './src/js/index.js',
+    'hackathon-2019': './src/js/hackathon-2019.js'
+  },
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, 'docs')
@@ -65,6 +68,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/hackathon-2019.html",
+      filename: "./hackathon-2019.html"
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
