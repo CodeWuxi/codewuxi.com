@@ -1,3 +1,5 @@
+@import './base.scss';
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .hack-2019-wrapper {
@@ -5,11 +7,11 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-  
+
       .section-content {
         display: flex;
         flex-direction: column;
-  
+
         .text-content {
           color: rgba(255,255,255,1);
           font-weight: 200;
@@ -23,10 +25,10 @@
             font-weight: 200;
           }
         }
-  
+
         .photo-wall {
           margin-top: .2rem;
-  
+
           .photo-item {
             margin-bottom: .3rem;
             height: 1rem;
@@ -36,11 +38,11 @@
         }
       }
     }
-  
+
     .banner-wrapper {
       .container {
         position: relative;
-  
+
         .banner-site-name {
           position: relative;
           font-size: .2rem;
@@ -50,7 +52,7 @@
           text-transform: uppercase;
           z-index: 10;
         }
-  
+
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -61,12 +63,12 @@
           background-repeat: no-repeat;
           background-size: contain;
         }
-  
+
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
-  
+
           .banner_title {
             margin-top: .3rem;
             font-size: .72rem;
@@ -74,13 +76,13 @@
             line-height: 0.60rem;
             text-align: justify;
           }
-  
+
           .banner_subtitle {
             font-size: .5rem;
             line-height: .45rem;
             letter-spacing: .01rem;
           }
-  
+
           .banner_slogan {
             margin-top: .3rem;
             font-size: .6rem;
@@ -88,7 +90,7 @@
             line-height: .6rem;
             text-align: justify;
           }
-  
+
           .banner_info {
             margin-top: .3rem;
             font-size: .32rem;
@@ -98,7 +100,7 @@
         }
       }
     }
-  
+
     .introduction-wrapper {
       .icon-side {
         position: absolute;
@@ -111,15 +113,15 @@
         background-size: contain;
       }
     }
-  
+
     .subjects-wrapper {
       justify-items: center;
-  
+
       .picture-wall {
         .content {
           margin-bottom: 20px;
         }
-  
+
         .picture-item {
           margin-bottom: .4rem;
           min-height: 2.78rem;
@@ -134,37 +136,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+
       .title-wrapper {
         .title {
           margin-bottom: .23rem;
           font-size: .36rem;
         }
-  
+
         p {
           font-size: .15rem;
         }
       }
-  
+
       .schedule-list {
         width: 40%;
         display: flex;
         flex-direction: column;
-  
+
         .schedule-item {
           padding: 0.55rem;
           background-color: #fff;
           border-radius: 4px;
-  
+
           &:first-child {
             margin-bottom: .4rem;
           }
-  
+
           h5 {
             color: #0D253E;
             font-size: .3rem;
           }
-  
+
           p {
             color: #aaa;
             font-size: .2rem;
@@ -199,7 +201,7 @@
         }
       }
     }
-  
+
     .guide-wrapper {
       .section-content {
         .text-content {
@@ -208,7 +210,7 @@
       }
     }
   }
-  
+
   .scroll-bar {
     display: none; // no display on portrait screen
     position: fixed;
@@ -218,7 +220,7 @@
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
-  
+
     .scroll-slider {
       position: absolute;
       left: 50%;
@@ -229,16 +231,16 @@
       background-color: #fff;
     }
   }
-  
+
   footer {
     padding: 1rem 0;
-  
+
     .footer-logo-wrapper {
       .footer-logo {
         text-align: center;
       }
     }
-  
+
     .footer-copyright-wrapper {
       text-align: center;
       font-size: 0.28rem;
@@ -254,11 +256,11 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-  
+
       .section-content {
         display: flex;
         flex-direction: column;
-  
+
         .text-content {
           color: rgba(255,255,255,1);
           font-weight: 200;
@@ -272,10 +274,10 @@
             font-weight: 200;
           }
         }
-  
+
         .photo-wall {
           margin-top: .2rem;
-  
+
           .photo-item {
             margin-bottom: .3rem;
             height: 1rem;
@@ -285,11 +287,11 @@
         }
       }
     }
-  
+
     .banner-wrapper {
       .container {
         position: relative;
-  
+
         .banner-site-name {
           position: relative;
           font-size: .2rem;
@@ -299,7 +301,7 @@
           text-transform: uppercase;
           z-index: 10;
         }
-  
+
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -310,12 +312,12 @@
           background-repeat: no-repeat;
           background-size: contain;
         }
-  
+
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
-  
+
           .banner_title {
             margin-top: .3rem;
             font-size: 1rem;
@@ -323,13 +325,13 @@
             line-height: .86rem;
             text-align: justify;
           }
-  
+
           .banner_subtitle {
             font-size: .68rem;
             line-height: .6rem;
             letter-spacing: .02rem;
           }
-  
+
           .banner_slogan {
             margin-top: .36rem;
             font-size: .72rem;
@@ -337,7 +339,7 @@
             line-height: .72rem;
             text-align: justify;
           }
-  
+
           .banner_info {
             margin-top: .36rem;
             font-size: .32rem;
@@ -347,7 +349,7 @@
         }
       }
     }
-  
+
     .introduction-wrapper {
       .icon-side {
         position: absolute;
@@ -360,15 +362,15 @@
         background-size: contain;
       }
     }
-  
+
     .subjects-wrapper {
       justify-items: center;
-  
+
       .picture-wall {
         .content {
           margin-bottom: 20px;
         }
-  
+
         .picture-item {
           margin-bottom: .4rem;
           min-height: 2.78rem;
@@ -383,37 +385,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+
       .title-wrapper {
         .title {
           margin-bottom: .23rem;
           font-size: .36rem;
         }
-  
+
         p {
           font-size: .15rem;
         }
       }
-  
+
       .schedule-list {
         width: 40%;
         display: flex;
         flex-direction: column;
-  
+
         .schedule-item {
           padding: 0.55rem;
           background-color: #fff;
           border-radius: 4px;
-  
+
           &:first-child {
             margin-bottom: .4rem;
           }
-  
+
           h5 {
             color: #0D253E;
             font-size: .3rem;
           }
-  
+
           p {
             color: #aaa;
             font-size: .2rem;
@@ -448,7 +450,7 @@
         }
       }
     }
-  
+
     .guide-wrapper {
       .section-content {
         .text-content {
@@ -457,7 +459,7 @@
       }
     }
   }
-  
+
   .scroll-bar {
     position: fixed;
     right: 1.36rem;
@@ -466,7 +468,7 @@
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
-  
+
     .scroll-slider {
       position: absolute;
       left: 50%;
@@ -477,16 +479,16 @@
       background-color: #fff;
     }
   }
-  
+
   footer {
     padding: 1rem 0;
-  
+
     .footer-logo-wrapper {
       .footer-logo {
         text-align: center;
       }
     }
-  
+
     .footer-copyright-wrapper {
       text-align: center;
       font-size: 0.28rem;
@@ -502,11 +504,11 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-  
+
       .section-content {
         display: flex;
         flex-direction: column;
-  
+
         .text-content {
           color: rgba(255,255,255,1);
           font-weight: 200;
@@ -520,10 +522,10 @@
             font-weight: 200;
           }
         }
-  
+
         .photo-wall {
           margin-top: .2rem;
-  
+
           .photo-item {
             margin-bottom: .3rem;
             height: 1rem;
@@ -533,11 +535,11 @@
         }
       }
     }
-  
+
     .banner-wrapper {
       .container {
         position: relative;
-  
+
         .banner-site-name {
           position: relative;
           font-size: .2rem;
@@ -547,7 +549,7 @@
           text-transform: uppercase;
           z-index: 10;
         }
-  
+
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -558,12 +560,12 @@
           background-repeat: no-repeat;
           background-size: contain;
         }
-  
+
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
-  
+
           .banner_title {
             margin-top: .3rem;
             font-size: 1.1rem;
@@ -571,20 +573,20 @@
             line-height: .9rem;
             text-align: justify;
           }
-  
+
           .banner_subtitle {
             font-size: .64rem;
             line-height: .56rem;
             letter-spacing: .02rem;
           }
-  
+
           .banner_slogan {
             margin-top: .36rem;
             font-size: .72rem;
             line-height: .72rem;
             text-align: justify;
           }
-  
+
           .banner_info {
             margin-top: .36rem;
             font-size: .32rem;
@@ -594,7 +596,7 @@
         }
       }
     }
-  
+
     .introduction-wrapper {
       .icon-side {
         position: absolute;
@@ -607,15 +609,15 @@
         background-size: contain;
       }
     }
-  
+
     .subjects-wrapper {
       justify-items: center;
-  
+
       .picture-wall {
         .content {
           margin-bottom: 20px;
         }
-  
+
         .picture-item {
           margin-bottom: .4rem;
           min-height: 2.78rem;
@@ -630,37 +632,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+
       .title-wrapper {
         .title {
           margin-bottom: .23rem;
           font-size: .36rem;
         }
-  
+
         p {
           font-size: .15rem;
         }
       }
-  
+
       .schedule-list {
         width: 40%;
         display: flex;
         flex-direction: column;
-  
+
         .schedule-item {
           padding: 0.55rem;
           background-color: #fff;
           border-radius: 4px;
-  
+
           &:first-child {
             margin-bottom: .4rem;
           }
-  
+
           h5 {
             color: #0D253E;
             font-size: .3rem;
           }
-  
+
           p {
             color: #aaa;
             font-size: .2rem;
@@ -695,7 +697,7 @@
         }
       }
     }
-  
+
     .guide-wrapper {
       .section-content {
         .text-content {
@@ -704,7 +706,7 @@
       }
     }
   }
-  
+
   .scroll-bar {
     display: none; // no display on portrait screen
     position: fixed;
@@ -714,7 +716,7 @@
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
-  
+
     .scroll-slider {
       position: absolute;
       left: 50%;
@@ -725,16 +727,16 @@
       background-color: #fff;
     }
   }
-  
+
   footer {
     padding: 1rem 0;
-  
+
     .footer-logo-wrapper {
       .footer-logo {
         text-align: center;
       }
     }
-  
+
     .footer-copyright-wrapper {
       text-align: center;
       font-size: 0.28rem;
@@ -750,11 +752,11 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-  
+
       .section-content {
         display: flex;
         flex-direction: column;
-  
+
         .text-content {
           color: rgba(255,255,255,1);
           font-weight: 200;
@@ -768,10 +770,10 @@
             font-weight: 200;
           }
         }
-  
+
         .photo-wall {
           margin-top: .2rem;
-  
+
           .photo-item {
             margin-bottom: .3rem;
             height: 1rem;
@@ -781,11 +783,11 @@
         }
       }
     }
-  
+
     .banner-wrapper {
       .container {
         position: relative;
-  
+
         .banner-site-name {
           position: relative;
           font-size: .2rem;
@@ -795,7 +797,7 @@
           text-transform: uppercase;
           z-index: 10;
         }
-  
+
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -806,12 +808,12 @@
           background-repeat: no-repeat;
           background-size: contain;
         }
-  
+
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
-  
+
           .banner_title {
             margin-top: .3rem;
             font-size: .81rem;
@@ -819,20 +821,20 @@
             line-height: 0.64rem;
             text-align: justify;
           }
-  
+
           .banner_subtitle {
             font-size: .5rem;
             line-height: .45rem;
             letter-spacing: .02rem;
           }
-  
+
           .banner_slogan {
             margin-top: .3rem;
             font-size: .72rem;
             line-height: .72rem;
             text-align: justify;
           }
-  
+
           .banner_info {
             margin-top: .3rem;
             font-size: .21rem;
@@ -842,7 +844,7 @@
         }
       }
     }
-  
+
     .introduction-wrapper {
       .icon-side {
         position: absolute;
@@ -855,15 +857,15 @@
         background-size: contain;
       }
     }
-  
+
     .subjects-wrapper {
       justify-items: center;
-  
+
       .picture-wall {
         .content {
           margin-bottom: 20px;
         }
-  
+
         .picture-item {
           margin-bottom: .4rem;
           min-height: 2.78rem;
@@ -878,37 +880,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+
       .title-wrapper {
         .title {
           margin-bottom: .23rem;
           font-size: .36rem;
         }
-  
+
         p {
           font-size: .15rem;
         }
       }
-  
+
       .schedule-list {
         width: 40%;
         display: flex;
         flex-direction: column;
-  
+
         .schedule-item {
           padding: 0.55rem;
           background-color: #fff;
           border-radius: 4px;
-  
+
           &:first-child {
             margin-bottom: .4rem;
           }
-  
+
           h5 {
             color: #0D253E;
             font-size: .3rem;
           }
-  
+
           p {
             color: #aaa;
             font-size: .2rem;
@@ -943,7 +945,7 @@
         }
       }
     }
-  
+
     .guide-wrapper {
       .section-content {
         .text-content {
@@ -952,7 +954,7 @@
       }
     }
   }
-  
+
   .scroll-bar {
     position: fixed;
     right: .6rem;
@@ -961,7 +963,7 @@
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
-  
+
     .scroll-slider {
       position: absolute;
       left: 50%;
@@ -972,16 +974,16 @@
       background-color: #fff;
     }
   }
-  
+
   footer {
     padding: 1rem 0 2rem 0;
-  
+
     .footer-logo-wrapper {
       .footer-logo {
         text-align: center;
       }
     }
-  
+
     .footer-copyright-wrapper {
       text-align: center;
       font-size: 0.21rem;
@@ -997,11 +999,11 @@
     .section-wrapper {
       position: relative;
       margin: 1rem 0;
-  
+
       .section-content {
         display: flex;
         flex-direction: column;
-  
+
         .text-content {
           color: rgba(255,255,255,1);
           font-weight: 200;
@@ -1015,10 +1017,10 @@
             font-weight: 200;
           }
         }
-  
+
         .photo-wall {
           margin: .18rem 0;
-  
+
           .photo-item {
             margin-bottom: .3rem;
             height: 1rem;
@@ -1028,11 +1030,11 @@
         }
       }
     }
-  
+
     .banner-wrapper {
       .container {
         position: relative;
-  
+
         .banner-site-name {
           position: relative;
           font-size: .2rem;
@@ -1042,7 +1044,7 @@
           text-transform: uppercase;
           z-index: 10;
         }
-  
+
         .banner-icon {
           position: absolute;
           top: -.3rem;
@@ -1053,12 +1055,12 @@
           background-repeat: no-repeat;
           background-size: contain;
         }
-  
+
         .banner {
           font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
           padding-top: .5rem;
           z-index: 10;
-  
+
           .banner_title {
             margin-top: .3rem;
             font-size: .9rem;
@@ -1066,13 +1068,13 @@
             line-height: 0.72rem;
             text-align: justify;
           }
-  
+
           .banner_subtitle {
             font-size: .52rem;
             line-height: .42rem;
             letter-spacing: .02rem;
           }
-  
+
           .banner_slogan {
             margin-top: .3rem;
             font-size: .75rem;
@@ -1080,7 +1082,7 @@
             line-height: .72rem;
             text-align: justify;
           }
-  
+
           .banner_info {
             margin-top: .3rem;
             font-size: .24rem;
@@ -1090,7 +1092,7 @@
         }
       }
     }
-  
+
     .introduction-wrapper {
       .icon-side {
         position: absolute;
@@ -1103,15 +1105,15 @@
         background-size: contain;
       }
     }
-  
+
     .subjects-wrapper {
       justify-items: center;
-  
+
       .picture-wall {
         .content {
           margin-bottom: 20px;
         }
-  
+
         .picture-item {
           margin-bottom: .4rem;
           min-height: 2.78rem;
@@ -1126,37 +1128,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+
       .title-wrapper {
         .title {
           margin-bottom: .23rem;
           font-size: .36rem;
         }
-  
+
         p {
           font-size: .15rem;
         }
       }
-  
+
       .schedule-list {
         width: 40%;
         display: flex;
         flex-direction: column;
-  
+
         .schedule-item {
           padding: 0.55rem;
           background-color: #fff;
           border-radius: 4px;
-  
+
           &:first-child {
             margin-bottom: .4rem;
           }
-  
+
           h5 {
             color: #0D253E;
             font-size: .3rem;
           }
-  
+
           p {
             color: #aaa;
             font-size: .2rem;
@@ -1191,7 +1193,7 @@
         }
       }
     }
-  
+
     .guide-wrapper {
       .section-content {
         .text-content {
@@ -1200,7 +1202,7 @@
       }
     }
   }
-  
+
   .scroll-bar {
     position: fixed;
     right: 1.36rem;
@@ -1209,7 +1211,7 @@
     height: 4rem;
     background-color: #fff;
     border-radius: 0.045px;
-  
+
     .scroll-slider {
       position: absolute;
       left: 50%;
@@ -1220,16 +1222,16 @@
       background-color: #fff;
     }
   }
-  
+
   footer {
     padding: 1rem 0 2rem 0;
-  
+
     .footer-logo-wrapper {
       .footer-logo {
         text-align: center;
       }
     }
-  
+
     .footer-copyright-wrapper {
       text-align: center;
       font-size: 0.18rem;
