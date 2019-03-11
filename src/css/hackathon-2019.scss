@@ -10,7 +10,7 @@
       flex-direction: column;
 
       .text-content {
-        color: rgba(255,255,255,1);
+        color: rgba(0,0,0,1);
         font-weight: 200;
         font-size: .24rem;
         line-height: .48rem;
@@ -135,6 +135,21 @@
       background-image: url('../assets/images/code_side.png');
       background-repeat: no-repeat;
       background-size: contain;
+    }
+  }
+
+  .detail-wrapper {
+    .detail-time {
+      font-size: .36rem;
+    }
+
+    .detail-location {
+      font-size: .48rem;
+    }
+
+    .detail-address {
+      border-top: 1px solid #000;
+      font-size: .21rem;
     }
   }
 
