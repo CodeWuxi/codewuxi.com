@@ -9,7 +9,7 @@ html {
 
 body {
   background-color: #000;
-  color: #fff;
+  color: #000;
   // font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, Heiti, “黑体”, sans-serif;
   font-family: -apple-system-font, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -92,10 +92,6 @@ body {
 
   .cw-text-center {
     text-align: center !important;
-  }
-
-  .cw-text-large {
-    font-size: .36rem !important;
   }
 }
 
