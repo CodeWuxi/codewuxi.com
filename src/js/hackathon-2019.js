@@ -70,15 +70,16 @@ $W.on('scroll', (e) => {
   if (!$body.hasClass('body-white') && scrollT > (winH / 2)) {
     console.log('变色！');
     $body.removeClass('body-home').addClass('body-white')
-    $colTitle.addClass('turn-black')
-    $scrollBar.addClass('turn-black')
+    $colTitle.removeClass('turn-white')
+    $scrollBar.removeClass('turn-white')
     $bannerWrap.animate({
       opacity: 0
     })
   } else if (!$body.hasClass('body-home') && scrollT <= (winH / 2)) {
     $body.removeClass('body-white').addClass('body-home')
-    $colTitle.removeClass('turn-black')
-    $scrollBar.removeClass('turn-black')
+    $colTitle.addClass('turn-white')
+    $scrollBar.addClass('turn-white')
+
     $bannerWrap.animate({
       opacity: 1
     })
