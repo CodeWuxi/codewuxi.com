@@ -8,7 +8,7 @@
     .section-content {
       display: flex;
       flex-direction: column;
-
+      align-items: center;
       .text-content {
         color: rgba(0,0,0,1);
         font-weight: 200;
@@ -55,9 +55,9 @@
     transform: rotate(180deg);
     text-transform: uppercase;
     z-index: 10;
-
-    &.turn-black {
-      color: #444;
+    color: #444;
+    &.turn-white {
+      color: #fff;
     }
   }
 
@@ -70,6 +70,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #000;
+    color: #fff;
     .container {
       position: relative;
 
@@ -150,6 +152,58 @@
     .detail-address {
       border-top: 1px solid #000;
       font-size: .21rem;
+    }
+  }
+
+  .awards-wrapper {
+    .award-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .award-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        border-radius: 14px;
+        font-size: .2rem;
+        font-weight: 200;
+        &.first-rank {
+          .award-rank {
+            background-color: #FFCA0F;
+          }
+        }
+        &.second-rank {
+          .award-rank {
+            background-color: #1E75F6;
+          }
+        }
+        &.third-rank {
+          .award-rank {
+            background-color: #FF3E61;
+          }
+        }
+        .award-rank {
+          padding: .35rem 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          color: #fff;
+          border-radius: 14px 14px 0 0;
+
+          h4 {
+            font-size: .34rem;
+          }
+          span {
+          }
+        }
+        p {
+          padding: .27rem 0;
+          font-weight: 200;
+          border-radius: 0 0 14px 14px;
+        }
+      }
     }
   }
 
@@ -256,12 +310,12 @@
   top: 2rem;
   width: 0.02rem;
   height: 4rem;
-  background-color: #fff;
+  background-color: #444;
   border-radius: 0.045px;
-  &.turn-black {
-    background-color: #444;
+  &.turn-white {
+    background-color: #fff;
     .scroll-slider {
-      background-color: #444;
+      background-color: #fff;
     }
   }
 
@@ -272,7 +326,7 @@
     transform: translateX(-50%);
     height: 100%;
     width: 0.06rem;
-    background-color: #fff;
+    background-color: #444;
   }
 }
 
