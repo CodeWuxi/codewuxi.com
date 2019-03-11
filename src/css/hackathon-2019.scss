@@ -49,11 +49,11 @@
     position: fixed;
     top: 1.5rem;
     left: 1rem;
-    font-family: Comfortaa, cursive;
+    font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     font-size: .27rem;
     font-weight: bold;
     writing-mode: vertical-rl;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.03rem;
     transform: rotate(180deg);
     text-transform: uppercase;
     z-index: 10;
@@ -321,6 +321,8 @@ footer {
 
   .footer-logo-wrapper {
     .footer-logo {
+      font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: .48rem;
       text-align: center;
     }
   }
