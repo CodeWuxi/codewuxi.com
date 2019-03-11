@@ -8,7 +8,10 @@ const $scrollBar = $('.scroll-bar')
 const $scrollSlider = $('.scroll-slider')
 const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
-const $bannerWrap = $('.banner-wrapper .container')
+const $bannerBlack = $('.banner-black')
+const $footerBlack = $('.footer-black')
+const $bannerWrap = $('.banner-wrapper')
+const $bannerCont = $('.banner-wrapper .container')
 const docH = $D.outerHeight(true)
 const winH = $W.height()
 
@@ -43,7 +46,7 @@ const setScrollReveal = () => {
     }
   })
 }
-console.log($bannerWrap);
+
 const setTextLogoAnime = () => {
   anime({
     targets: 'path',
@@ -66,23 +69,41 @@ init()
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
   let scrollScale = (scrollT / (docH - winH)) * 100
+  console.log(scrollT);
+  // 滚动距离在标题的±20范围内
+  if (scrollT > 580 && scrollT <= 980 ) {
+    let dis = 0
+    dis = 250 - (scrollT - 580) > 0 ? 250 - (scrollT - 580) : 0
+    dis = dis > 250 ? 250 : dis
 
-  if (!$body.hasClass('body-white') && scrollT > (winH / 2)) {
-    console.log('变色！');
-    $body.removeClass('body-home').addClass('body-white')
+    console.log('进入目标区域', dis);
+    $($title[0]).find('.line').css('height', `${dis}px`)
+  }
+
+  // banner
+  if (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4)) {
+    $bannerCont.css('opacity', 0)
+    $bannerBlack.fadeOut()
+    $bannerWrap.addClass('turn-white')
     $colTitle.removeClass('turn-white')
     $scrollBar.removeClass('turn-white')
-    $bannerWrap.animate({
-      opacity: 0
-    })
-  } else if (!$body.hasClass('body-home') && scrollT <= (winH / 2)) {
-    $body.removeClass('body-white').addClass('body-home')
+
+  } else if (scrollT <= (winH / 4)) {
+    $bannerWrap.removeClass('turn-white')
     $colTitle.addClass('turn-white')
     $scrollBar.addClass('turn-white')
+    $bannerBlack.fadeIn()
+    $bannerCont.css('opacity', 1)
+  }
 
-    $bannerWrap.animate({
-      opacity: 1
-    })
+  // footer
+  if (scrollT > (docH - winH - 100)) {
+    console.log('footer');
+    $footerBlack.fadeIn()
+
+  } else if (scrollT < (docH - winH - 100)) {
+    $footerBlack.fadeOut()
+
   }
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
@@ -91,6 +112,7 @@ $W.on('scroll', (e) => {
 
 let titleMap = $title.map((idx,ele) => {
   let $ele = $(ele)
+  console.log($ele.text(), $ele.offset().top, $ele.outerHeight())
   return $ele.text().trim()
 })
 
