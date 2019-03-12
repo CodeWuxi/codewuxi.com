@@ -15,6 +15,8 @@ const $bannerCont = $('.banner-wrapper .container')
 const docH = $D.outerHeight(true)
 const winH = $W.height()
 
+let titlePos = []
+let titleHeight = []
 const setScrollReveal = () => {
   window.sr = ScrollReveal();
 
@@ -69,16 +71,29 @@ init()
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
   let scrollScale = (scrollT / (docH - winH)) * 100
-  console.log(scrollT, docH - winH - 100);
-  // 滚动距离在标题的±20范围内
-  if (scrollT > 580 && scrollT <= 980 ) {
-    let dis = 0
-    dis = 250 - (scrollT - 580) > 0 ? 250 - (scrollT - 580) : 0
-    dis = dis > 250 ? 250 : dis
+  console.log(scrollT);
 
-    console.log('进入目标区域', dis);
-    $($title[0]).find('.line').css('height', `${dis}px`)
+  // 滚动距离在标题的±100范围内
+  switch (true) {
+    case (scrollT > (titlePos[0]-100) && scrollT <= (titlePos[0] + titleHeight[0])):
+      console.log(`进入目标 0 区域`);
+      // setLineHeight(0, scrollT - (titlePos[0]-100))
+      break
+    case (scrollT > (titlePos[1]-100) && scrollT <= (titlePos[1] + titleHeight[1])):
+      console.log(`进入目标 1 区域`);
+      // setLineHeight(1, scrollT - (titlePos[1]-100))
+      break
+    case (scrollT > (titlePos[2]-100) && scrollT <= (titlePos[2] + titleHeight[2])):
+      console.log(`进入目标 2 区域`);
+      // setLineHeight(2, scrollT - (titlePos[2]-100))
+      break
+    case (scrollT > (titlePos[3]-100) && scrollT <= (titlePos[3] + titleHeight[3])):
+      console.log(`进入目标 3 区域`);
+      // setLineHeight(3, scrollT - (titlePos[3]-100))
+      break
+
   }
+
 
   switch (true) {
     case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4) && scrollT < winH):
@@ -121,11 +136,28 @@ $W.on('scroll', (e) => {
   $scrollSlider.css('height', `${100 - scrollScale}%`)
 })
 
+const setLineHeight = (index, dis) => {
+  let height = 0
+  height = 250 - dis > 0 ? 250 - dis : 0
+  height = height > 250 ? 250 : height
+
+  $($title[index]).find('.line').css('height', `${height}px`)
+}
+
+function isInViewPort (element) {
+  const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+  const top = element.getBoundingClientRect() && element.getBoundingClientRect().top
+  console.log('top', top)
+  return top  <= viewPortHeight + 100
+}
 
 let titleMap = $title.map((idx,ele) => {
   let $ele = $(ele)
-  console.log($ele.text(), $ele.offset().top, $ele.outerHeight())
+  titlePos.push($ele.offset().top)
+  titleHeight.push($ele.outerHeight())
+  // console.log($ele.text(), $ele.offset().top, $ele.outerHeight())
   return $ele.text().trim()
 })
 
-console.log(titleMap);
+// console.log(titleMap);
+console.log(titlePos, titleHeight);

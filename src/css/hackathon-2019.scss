@@ -14,6 +14,7 @@
   }
 
   .section-wrapper {
+    margin: .3rem 0;
     position: relative;
     min-height: 90vh;
     .section-content {
@@ -76,6 +77,14 @@
             p {
               font-weight: 200;
             }
+          }
+        }
+
+        .logo-item {
+          margin: .2rem;
+          height: 1rem;
+          img {
+            height: 100%;
           }
         }
       }
