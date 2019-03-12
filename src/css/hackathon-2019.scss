@@ -2,13 +2,25 @@
 
 .hack-2019-wrapper {
 
+  .banner-black {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+
   .section-wrapper {
     position: relative;
-    margin: 1rem 0;
+    min-height: 80vh;
+    // border: 1px solid navy;
     .section-content {
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       .text-content {
         color: rgba(0,0,0,1);
         font-weight: 200;
@@ -25,24 +37,45 @@
 
       .photo-wall {
         margin: .18rem 0;
+        width: 100%;
 
         .photo-item {
+          position: relative;
+          padding-top: 100%;
           margin-bottom: .3rem;
-          height: 1rem;
-          background-color: #d8d8d8;
-          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          .photo-cover {
+            margin-bottom: .2rem;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              z-index: -1;
+              width: 100%;
+              padding-bottom: 100%;
+              border-radius: 50%;
+              background-color: #d4c5f9;
+              background-image: url('../assets/images/IMG_6528.JPG');
+              background-repeat: no-repeat;
+              background-size: contain;
+              transform: translateY(-100%);
+            }
+          }
+
+          .photo-user {
+            h5 {
+              font-size: .27rem;
+              line-height: .3rem;
+            }
+            p {
+              font-weight: 200;
+            }
+          }
         }
       }
     }
-  }
-
-  .line {
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    width: 1px;
-    height: 2.5rem;
-    background-color: #fff;
   }
 
   .hack-col-title {
@@ -69,13 +102,18 @@
 
   .banner-wrapper {
     margin: 0;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #000;
     color: #fff;
+    transition: all 1s;
+    &.turn-white {
+      background-color: #fff;
+    }
     .container {
       position: relative;
+      transition: all 1s;
 
       .banner-icon {
         position: absolute;
