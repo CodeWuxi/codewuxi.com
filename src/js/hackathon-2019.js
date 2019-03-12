@@ -80,31 +80,43 @@ $W.on('scroll', (e) => {
     $($title[0]).find('.line').css('height', `${dis}px`)
   }
 
-  // banner
-  if (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4)) {
-    $bannerBlack.fadeOut()
-    $bannerCont.css('opacity', 0)
-    $colTitle.removeClass('turn-white')
-    $scrollBar.removeClass('turn-white')
-
-  } else if (scrollT <= (winH / 4)) {
-    $bannerBlack.fadeIn()
-    $colTitle.addClass('turn-white')
-    $scrollBar.addClass('turn-white')
-    $bannerCont.css('opacity', 1)
+  switch (true) {
+    case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4) && scrollT < winH):
+      console.log('out banner');
+      $bannerBlack.fadeOut()
+      $footerBlack.removeClass('active').fadeOut()
+      $bannerCont.css('opacity', 0)
+      $colTitle.removeClass('turn-white')
+      $scrollBar.removeClass('turn-white')
+      break
+    case (scrollT <= (winH / 4)):
+      console.log('in banner');
+      $bannerBlack.fadeIn()
+      $colTitle.addClass('turn-white')
+      $scrollBar.addClass('turn-white')
+      $bannerCont.css('opacity', 1)
+      break
+    case (scrollT > (docH - winH - 200)):
+      console.log('footer');
+      $footerBlack.addClass('active').fadeIn()
+      $colTitle.addClass('turn-white')
+      $scrollBar.addClass('turn-white')
+      break
+    case ($footerBlack.hasClass('active') && scrollT < (docH - winH - 200) && scrollT > winH):
+      console.log('out footer');
+      $footerBlack.removeClass('active').fadeOut()
+      $colTitle.removeClass('turn-white')
+      $scrollBar.removeClass('turn-white')
+      $bannerBlack.fadeOut()
+      break
+    default:
+      $bannerBlack.fadeOut()
+      $footerBlack.removeClass('active').fadeOut()
+      $colTitle.removeClass('turn-white')
+      $scrollBar.removeClass('turn-white')
+      break
   }
 
-  // footer
-  if (scrollT > (docH - winH - 100)) {
-    console.log('footer');
-    $footerBlack.fadeIn()
-    $colTitle.addClass('turn-white')
-    $scrollBar.addClass('turn-white')
-  } else if (scrollT < (docH - winH - 100)) {
-    $footerBlack.fadeOut()
-    $colTitle.removeClass('turn-white')
-    $scrollBar.removeClass('turn-white')
-  }
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
 })

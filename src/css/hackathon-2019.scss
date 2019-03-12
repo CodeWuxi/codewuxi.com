@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: #000;
     z-index: 1;
+    display: none;
   }
 
   .section-wrapper {
@@ -38,16 +39,19 @@
       .photo-wall {
         margin: .18rem 0;
         width: 100%;
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .photo-item {
+          margin: 0 .2rem .3rem .2rem;
           position: relative;
-          padding-top: 100%;
-          margin-bottom: .3rem;
+          width: 20%;
           display: flex;
           flex-direction: column;
           text-align: center;
           .photo-cover {
             margin-bottom: .2rem;
+            padding-top: 100%;
             &:after {
               content: "";
               display: block;
