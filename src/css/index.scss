@@ -1,4 +1,10 @@
 @import './base.scss';
 
 .index-wrapper {
+  .text-content {
+    p {
+      margin: .27rem 0;
+      font-weight: 200;
+    }
+  };
 }
