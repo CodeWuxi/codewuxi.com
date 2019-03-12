@@ -60,7 +60,7 @@ const setTextLogoAnime = () => {
 }
 
 const init = () => {
-  setScrollReveal()
+  // setScrollReveal()
   setTextLogoAnime()
 }
 
@@ -69,7 +69,7 @@ init()
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
   let scrollScale = (scrollT / (docH - winH)) * 100
-  console.log(scrollT);
+  console.log(scrollT, docH - winH - 100);
   // 滚动距离在标题的±20范围内
   if (scrollT > 580 && scrollT <= 980 ) {
     let dis = 0
@@ -82,17 +82,15 @@ $W.on('scroll', (e) => {
 
   // banner
   if (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4)) {
-    $bannerCont.css('opacity', 0)
     $bannerBlack.fadeOut()
-    $bannerWrap.addClass('turn-white')
+    $bannerCont.css('opacity', 0)
     $colTitle.removeClass('turn-white')
     $scrollBar.removeClass('turn-white')
 
   } else if (scrollT <= (winH / 4)) {
-    $bannerWrap.removeClass('turn-white')
+    $bannerBlack.fadeIn()
     $colTitle.addClass('turn-white')
     $scrollBar.addClass('turn-white')
-    $bannerBlack.fadeIn()
     $bannerCont.css('opacity', 1)
   }
 
@@ -100,10 +98,12 @@ $W.on('scroll', (e) => {
   if (scrollT > (docH - winH - 100)) {
     console.log('footer');
     $footerBlack.fadeIn()
-
+    $colTitle.addClass('turn-white')
+    $scrollBar.addClass('turn-white')
   } else if (scrollT < (docH - winH - 100)) {
     $footerBlack.fadeOut()
-
+    $colTitle.removeClass('turn-white')
+    $scrollBar.removeClass('turn-white')
   }
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
