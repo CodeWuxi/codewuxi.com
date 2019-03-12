@@ -10,9 +10,11 @@
     height: 100vh;
     background-color: #000;
     z-index: 1;
+    display: none;
   }
 
   .section-wrapper {
+    margin: .3rem 0;
     position: relative;
     min-height: 90vh;
     .section-content {
@@ -38,16 +40,19 @@
       .photo-wall {
         margin: .18rem 0;
         width: 100%;
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .photo-item {
+          margin: 0 .2rem .3rem .2rem;
           position: relative;
-          padding-top: 100%;
-          margin-bottom: .3rem;
+          width: 20%;
           display: flex;
           flex-direction: column;
           text-align: center;
           .photo-cover {
             margin-bottom: .2rem;
+            padding-top: 100%;
             &:after {
               content: "";
               display: block;
@@ -72,6 +77,14 @@
             p {
               font-weight: 200;
             }
+          }
+        }
+
+        .logo-item {
+          margin: .2rem;
+          height: 1rem;
+          img {
+            height: 100%;
           }
         }
       }
