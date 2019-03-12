@@ -62,6 +62,17 @@ const setTextLogoAnime = () => {
 }
 
 const init = () => {
+  if ($W.scrollTop() !== 0) {
+    $bannerBlack.show()
+    $footerBlack.removeClass('active').fadeOut()
+    $colTitle.removeClass('turn-white')
+    $scrollBar.removeClass('turn-white')
+    $bannerCont.css('opacity', 1)
+  }
+  if ($W.scrollTop() == 0) {
+    $colTitle.addClass('turn-white')
+    $scrollBar.addClass('turn-white')
+  }
   // setScrollReveal()
   setTextLogoAnime()
 }
