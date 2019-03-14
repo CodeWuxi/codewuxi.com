@@ -35,145 +35,185 @@ body {
   ul, li {
     list-style: none;
   }
+}
 
-  header {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  height: .8rem;
+
+  .container .row .col-xl-1 {
+    max-height: .8rem;
+  }
+  .icon-codewuxi {
+    display: inline-block;
+    width: 0.38rem;
+    height: 0.38rem;
+    background-image: url('../assets/images/codewuxi.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+footer {
+  padding: .5rem 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .footer-black {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    height: .8rem;
-
-    .container .row .col-xl-1 {
-      max-height: .8rem;
-    }
-    .icon-codewuxi {
-      display: inline-block;
-      width: 0.38rem;
-      height: 0.38rem;
-      background-image: url('../assets/images/codewuxi.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-
-  footer {
-    padding: .5rem 0;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #000;
+  }
 
-    .footer-black {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #000;
-    }
+  .contact-wrapper, .container {
+    z-index: 1;
+  }
 
-    .contact-wrapper, .container {
-      z-index: 1;
-    }
-
-    .footer-logo-wrapper {
-      .footer-logo {
-        text-align: center;
-      }
-    }
-
-    .footer-copyright-wrapper {
+  .footer-logo-wrapper {
+    .footer-logo {
       text-align: center;
-      font-size: 0.28rem;
-      font-weight: 300;
+    }
+  }
+
+  .footer-copyright-wrapper {
+    text-align: center;
+    font-size: 0.28rem;
+    font-weight: 300;
+    color: rgba(255,255,255,.72);
+    a {
       color: rgba(255,255,255,.72);
-      a {
-        color: rgba(255,255,255,.72);
-        text-decoration: none;
-      }
-      a:hover {
-        color: #fff;
-        text-decoration: none;
-      }
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: none;
     }
   }
+}
 
-  .cw-title {
-    margin-top: .5rem;
-    margin-bottom: .1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    font-size: .48rem;
-    line-height: .67rem;
-    letter-spacing: .09rem;
+.cw-title {
+  margin-top: .5rem;
+  margin-bottom: .1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: .48rem;
+  line-height: .67rem;
+  letter-spacing: .09rem;
 
-    .line {
-      z-index: 1;
-      width: 1px;
-      height: 2rem;
-      background-color: #000;
-      &.line-top {
-        margin-bottom: .2rem;
-      }
-      &.line-bottom {
-        margin-top: .2rem;
-      }
+  .line {
+    z-index: 1;
+    width: 1px;
+    height: 2rem;
+    background-color: #000;
+    &.line-top {
+      margin-bottom: .2rem;
     }
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   top: -.08rem;
-    //   left: -.2rem;
-    //   width: .17rem;
-    //   height: .17rem;
-    //   background-image: url('../assets/images/title.png');
-    //   background-repeat: no-repeat;
-    //   background-size: contain;
-    // }
-  }
-
-  .cw-sm-title {
-    margin-top: 0.32rem;
-    position: relative;
-    color: #fff;
-    font-size: .32rem;
-    line-height: .64rem;
-  }
-
-  .cw-text-justify {
-    text-align: justify;
-    text-align-last: justify;
-  }
-
-  .cw-text-center {
-    text-align: center !important;
-  }
-
-  .button-group {
-    display: flex;
-    .cw-button:first-child {
-      margin-right: .8rem;
+    &.line-bottom {
+      margin-top: .2rem;
     }
   }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: -.08rem;
+  //   left: -.2rem;
+  //   width: .17rem;
+  //   height: .17rem;
+  //   background-image: url('../assets/images/title.png');
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  // }
+}
 
-  .cw-button {
-    padding: 10px;
-    width: fit-content;
-    font-size: .24rem;
-    letter-spacing: .03rem;
-    font-weight: 200;
-    border: 1px solid $--color-black;
-    background-color: $--color-white;
-    transition: all .5s;
-    &:hover {
-      color: $--color-white;
-      background-color: $--color-black;
+.cw-sm-title {
+  margin-top: 0.32rem;
+  position: relative;
+  color: #fff;
+  font-size: .32rem;
+  line-height: .64rem;
+}
+
+.cw-text-justify {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.cw-text-center {
+  text-align: center !important;
+}
+
+.button-group {
+  display: flex;
+  .cw-button:first-child {
+    margin-right: .8rem;
+  }
+}
+
+.cw-button {
+  padding: 10px;
+  width: fit-content;
+  font-size: .24rem;
+  letter-spacing: .03rem;
+  font-weight: 200;
+  border: 1px solid $--color-black;
+  background-color: $--color-white;
+  outline: none;
+  transition: all .5s;
+  &:hover {
+    color: $--color-white;
+    background-color: $--color-black;
+  }
+}
+
+.cw-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.3);
+  z-index: 99;
+
+  .dialog-content {
+    padding: .2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 4rem;
+    background-color: #fff;
+    z-index: 999;
+    .icon-close {
+      position: absolute;
+      bottom: 0.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: .3rem;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+    }
+    h3 {
+      font-size: .24rem;
+      text-align: center;
     }
   }
 }
@@ -183,13 +223,8 @@ body {
   .cw-title {
     margin-top: .3rem;
     margin-bottom: 0rem;
-    position: relative;
-    display: inline-block;
-    align-self: center;
-    color: #fff;
     font-size: .56rem;
     line-height: .75rem;
-    letter-spacing: .09rem;
     &:after {
       content: '';
       position: absolute;
@@ -204,12 +239,19 @@ body {
   }
 
   .cw-sm-title {
-    margin-top: 0.32rem;
-    position: relative;
-    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
+  }
+
+  .cw-dialog {
+    .dialog-content {
+      width: 80%;
+      height: 4rem;
+      .icon-close {
+        // font-size: 28px;
+      }
+    }
   }
 }
 
@@ -217,11 +259,7 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
 
   .cw-title {
-    margin-top: .5rem;
     margin-bottom: .4rem;
-    position: relative;
-    display: inline-block;
-    align-self: center;
     font-size: .72rem;
     line-height: .75rem;
     letter-spacing: .09rem;
@@ -239,9 +277,6 @@ body {
   }
 
   .cw-sm-title {
-    margin-top: 0.32rem;
-    position: relative;
-    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
@@ -256,22 +291,10 @@ body {
     .container .row .col-xl-1 {
       max-height: .8rem;
     }
-    .icon-codewuxi {
-      display: inline-block;
-      width: 0.38rem;
-      height: 0.38rem;
-      background-image: url('../assets/images/codewuxi.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
   }
 
   .cw-title {
     margin-top: .5rem;
-    margin-bottom: .4rem;
-    position: relative;
-    display: inline-block;
-    align-self: center;
     font-size: .72rem;
     line-height: .75rem;
     letter-spacing: .09rem;
@@ -289,9 +312,6 @@ body {
   }
 
   .cw-sm-title {
-    margin-top: 0.32rem;
-    position: relative;
-    color: #fff;
     font-size: .42rem;
     font-weight: 600;
     line-height: .72rem;
@@ -305,11 +325,7 @@ body {
   }
 
   .cw-title {
-    margin-top: .5rem;
     margin-bottom: .2rem;
-    position: relative;
-    display: inline-block;
-    align-self: center;
     font-size: .54rem;
     line-height: .67rem;
     letter-spacing: .09rem;
@@ -333,8 +349,4 @@ body {
   html {
     font-size: 625%;
   }
-
-  header {
-  }
-
 }

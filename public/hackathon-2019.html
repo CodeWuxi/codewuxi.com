@@ -15,6 +15,7 @@
   <title>CodeWuxi Hackathon 2019</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Comfortaa">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1086808_a5k287cz7sf.css">
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 </head>
@@ -113,7 +114,7 @@
                 <p class="detail-address">江苏无锡震泽路18号无锡（国家）软件园凤凰座1楼</p>
               </div>
               <div class="button-group">
-                <button class="cw-button">
+                <button class="cw-button show-map-button">
                   查看地图
                 </button>
                 <button class="cw-button">
@@ -583,10 +584,18 @@
 
   </div>
 
-    <section class="scroll-bar">
+  <section class="scroll-bar">
     <!-- 768+ display -->
     <div class="scroll-slider"></div>
   </section>
+
+  <div class="cw-dialog" id="map-dialog">
+    <div class="dialog-mask"></div>
+    <div class="dialog-content">
+      <i class="iconfont icon-close"></i>
+      <h3>地图</h3>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-black"></div>
