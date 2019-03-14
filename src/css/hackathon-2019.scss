@@ -219,7 +219,6 @@
         flex-direction: column;
         align-items: center;
         width: 30%;
-        border-radius: 14px;
         font-size: .2rem;
         font-weight: 200;
         box-shadow: 2px 2px 10px 0 rgba(0,0,0,.2);
@@ -245,7 +244,6 @@
           align-items: center;
           width: 100%;
           color: #fff;
-          border-radius: 14px 14px 0 0;
 
           h4 {
             font-size: .34rem;
@@ -256,7 +254,6 @@
         p {
           padding: .27rem 0;
           font-weight: 200;
-          border-radius: 0 0 14px 14px;
         }
       }
     }
@@ -392,27 +389,12 @@ footer {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .hack-2019-wrapper {
-
     .section-wrapper {
-      position: relative;
-      margin: 1rem 0;
 
       .section-content {
-        display: flex;
-        flex-direction: column;
-
         .text-content {
-          color: rgba(255,255,255,1);
-          font-weight: 200;
           font-size: .28rem;
-          line-height: .48rem;
           letter-spacing: .032rem;
-          text-align: justify;
-
-          p {
-            margin: .27rem 0;
-            font-weight: 200;
-          }
         }
 
         .photo-wall {
@@ -430,33 +412,11 @@ footer {
 
     .banner-wrapper {
       .container {
-        position: relative;
-
-        .banner-site-name {
-
-        }
-
-        .banner-icon {
-          position: absolute;
-          top: -.3rem;
-          left: .5rem;
-          width: 5.231rem;
-          height: 4.816rem;
-          background-image: url('../assets/images/code.png');
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
 
         .banner {
-          font-family: -apple-system-font, Montserrat, "Helvetica Neue", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-          z-index: 10;
-
           .banner_title {
-            margin-top: .3rem;
             font-size: .72rem;
-            font-weight: 600;
             line-height: 0.60rem;
-            text-align: justify;
           }
 
           .banner_subtitle {
@@ -466,95 +426,21 @@ footer {
           }
 
           .banner_slogan {
-            margin-top: .3rem;
             font-size: .6rem;
-            font-weight: 600;
             line-height: .6rem;
-            text-align: justify;
           }
 
           .banner_info {
             margin-top: .3rem;
             font-size: .32rem;
             line-height: .32rem;
-            text-align: justify;
           }
-        }
-      }
-    }
-
-    .introduction-wrapper {
-      .icon-side {
-        position: absolute;
-        top: .5rem;
-        right: 0;
-        width: 7.162rem;
-        height: 8.41rem;
-        background-image: url('../assets/images/code_side.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-    }
-
-    .subjects-wrapper {
-      justify-items: center;
-
-      .picture-wall {
-        .content {
-          margin-bottom: 20px;
-        }
-
-        .picture-item {
-          margin-bottom: .4rem;
-          min-height: 2.78rem;
-          background-color: #d8d8d8;
-          border-radius: 8px;
         }
       }
     }
 
     .schedule-wrapper {
-      min-height: 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      .title-wrapper {
-        .title {
-          margin-bottom: .23rem;
-          font-size: .36rem;
-        }
-
-        p {
-          font-size: .15rem;
-        }
-      }
-
-      .schedule-list {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-
-        .schedule-item {
-          padding: 0.55rem;
-          background-color: #fff;
-          border-radius: 4px;
-
-          &:first-child {
-            margin-bottom: .4rem;
-          }
-
-          h5 {
-            color: #0D253E;
-            font-size: .3rem;
-          }
-
-          p {
-            color: #aaa;
-            font-size: .2rem;
-          }
-        }
-      }
     }
 
     .register-wrapper {
@@ -585,48 +471,20 @@ footer {
     }
 
     .guide-wrapper {
-      .section-content {
-        .text-content {
-          text-align: center;
-        }
-      }
     }
   }
 
   .scroll-bar {
     display: none; // no display on portrait screen
-    position: fixed;
-    right: 1.36rem;
-    top: 2rem;
-    width: 0.03rem;
-    height: 4rem;
-    background-color: #fff;
-    border-radius: 0.045px;
-
-    .scroll-slider {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      height: 100%;
-      width: 0.06rem;
-      background-color: #fff;
-    }
   }
 
   footer {
     padding: 1rem 0;
 
     .footer-logo-wrapper {
-      .footer-logo {
-        text-align: center;
-      }
     }
 
     .footer-copyright-wrapper {
-      text-align: center;
-      font-size: 0.28rem;
-      font-weight: 300;
     }
   }
 }
@@ -778,31 +636,6 @@ footer {
         }
       }
 
-      .schedule-list {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-
-        .schedule-item {
-          padding: 0.55rem;
-          background-color: #fff;
-          border-radius: 4px;
-
-          &:first-child {
-            margin-bottom: .4rem;
-          }
-
-          h5 {
-            color: #0D253E;
-            font-size: .3rem;
-          }
-
-          p {
-            color: #aaa;
-            font-size: .2rem;
-          }
-        }
-      }
     }
 
     .register-wrapper {
@@ -1024,31 +857,6 @@ footer {
         }
       }
 
-      .schedule-list {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-
-        .schedule-item {
-          padding: 0.55rem;
-          background-color: #fff;
-          border-radius: 4px;
-
-          &:first-child {
-            margin-bottom: .4rem;
-          }
-
-          h5 {
-            color: #0D253E;
-            font-size: .3rem;
-          }
-
-          p {
-            color: #aaa;
-            font-size: .2rem;
-          }
-        }
-      }
     }
 
     .register-wrapper {
@@ -1271,31 +1079,6 @@ footer {
         }
       }
 
-      .schedule-list {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-
-        .schedule-item {
-          padding: 0.55rem;
-          background-color: #fff;
-          border-radius: 4px;
-
-          &:first-child {
-            margin-bottom: .4rem;
-          }
-
-          h5 {
-            color: #0D253E;
-            font-size: .3rem;
-          }
-
-          p {
-            color: #aaa;
-            font-size: .2rem;
-          }
-        }
-      }
     }
 
     .register-wrapper {

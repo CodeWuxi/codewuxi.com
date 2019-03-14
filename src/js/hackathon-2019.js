@@ -12,6 +12,9 @@ const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
 const $bannerCont = $('.banner-wrapper .container')
+const $mapButton = $('.show-map-button')
+const $mapDialog = $('#map-dialog')
+const $closeBtn = $('.cw-dialog .icon-close')
 const docH = $D.outerHeight(true)
 const winH = $W.height()
 
@@ -75,6 +78,14 @@ const init = () => {
   }
   // setScrollReveal()
   setTextLogoAnime()
+
+  $mapButton.on('click', () => {
+    console.log('click');
+    $mapDialog.fadeIn()
+  })
+  $closeBtn.on('click', () => {
+    $mapDialog.fadeOut()
+  })
 }
 
 init()
