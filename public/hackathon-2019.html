@@ -33,7 +33,7 @@
     <!-- ANIMATE END -->
 
     <!-- BANNER START -->
-    <section class="hack-col-title">
+    <section class="hack-col-title hidden-xs">
       Code&nbsp;Wuxi
     </section>
     <!-- ANIMATE END -->
@@ -242,40 +242,35 @@
                 日程安排
                 <!-- <i class="line line-bottom"></i> -->
               </h3>
-              <div class="row">
-                  <div class="col-12 col-sm-6">
-                    <section class="schedule-block section-content">
-                      <div class="text-content">
-                        <h4 style="font-size: 24px">第一天</h4>
-                        <p>
-                          08:00—09:00 参赛者签到<br>
-                          10:00—11:00	开幕式<br>
-                          12:00—13:00	午餐<br>
-                          13:00—18:00	产品开发<br>
-                          18:00—19:00	晚餐<br>
-                          19:00—23:00	产品开发<br>
-                          23:00—24:00	夜宵<br>
-                        </p>
-                      </div>
-                    </section>
+              <div class="schedule-block-wrapper">
+                <section class="schedule-block section-content">
+                  <div class="text-content">
+                    <h4 style="font-size: 24px">第一天</h4>
+                    <p>
+                      08:00—09:00 参赛者签到<br>
+                      10:00—11:00	开幕式<br>
+                      12:00—13:00	午餐<br>
+                      13:00—18:00	产品开发<br>
+                      18:00—19:00	晚餐<br>
+                      19:00—23:00	产品开发<br>
+                      23:00—24:00	夜宵<br>
+                    </p>
                   </div>
-      
-                  <div class="col-12 col-sm-6">
-                    <section class="schedule-block section-content">
-                      <div class="text-content">
-                        <h4 style="font-size: 24px">第二天</h4>
-                        <p>
-                          00:00—08:00	产品开发<br>
-                          08:00—09:00	早餐<br>
-                          09:00—12:00	产品开发，项目提交<br>
-                          12:00—13:00	午餐，项目预审<br>
-                          13:00—15:00	项目路演<br>
-                          15:00—16:00	评选并颁奖<br>
-                          16:00—17:00	参赛者自有交流                    
-                        </p>
-                      </div>
-                    </section>
+                </section>
+                <section class="schedule-block section-content">
+                  <div class="text-content">
+                    <h4 style="font-size: 24px">第二天</h4>
+                    <p>
+                      00:00—08:00	产品开发<br>
+                      08:00—09:00	早餐<br>
+                      09:00—12:00	产品开发，项目提交<br>
+                      12:00—13:00	午餐，项目预审<br>
+                      13:00—15:00	项目路演<br>
+                      15:00—16:00	评选并颁奖<br>
+                      16:00—17:00	参赛者自有交流
+                    </p>
                   </div>
+                </section>
               </div>
             </section>
           </div>
@@ -461,7 +456,7 @@
               </h3>
               <ul class="photo-wall">
                 <li class="logo-item">
-                  <img src="https://static-img.codewuxi.com/hackathon-2019/3wcoffee.png">
+                  <img src="https://static-img.codewuxi.com/hackathon-2019/3w.png">
                 </li>
                 <li class="logo-item">
                   <img src="https://static-img.codewuxi.com/hackathon-2019/duitang.png">
@@ -610,8 +605,8 @@
   <div class="cw-dialog" id="map-dialog">
     <div class="dialog-mask"></div>
     <div class="dialog-content">
-      <i class="iconfont icon-close"></i>
       <div id="baidu-map"></div>
+      <i class="iconfont icon-close"></i>
     </div>
   </div>
 
@@ -677,7 +672,7 @@
       mapTypes:[
         BMAP_NORMAL_MAP,
         BMAP_HYBRID_MAP
-      ]}));	  
+      ]}));
     map.setCurrentCity("无锡");          // 设置地图显示的城市 此项是必须设置的
     map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
   </script>
