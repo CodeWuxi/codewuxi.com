@@ -281,6 +281,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    .section-content {
+      color: #fff;
+
+      .text-content {
+        color: #fff;
+      }
+    }
 
     .title-wrapper {
       .title {
@@ -324,8 +332,27 @@
     // }
   }
 
-  .schedule-content-wrapper {
-    
+  .schedule-wrapper:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #000, #000);
+    animation: schedule-color-load 1s ease-in;
+    // temp fixed color
+    h4, p {
+      color: #fff !important;
+    }
+  }
+
+  @keyframes schedule-color-load {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
   }
 
   .register-wrapper {
