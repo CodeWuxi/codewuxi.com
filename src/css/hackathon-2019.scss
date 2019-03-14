@@ -279,6 +279,7 @@
   }
 
   .schedule-wrapper {
+    height: 100vh;
     min-height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -327,10 +328,18 @@
 
   }
 
+  .sponsors-wrapper, .partners-wrapper, .media-wrapper {
+    min-height: 55vh;
+  }
+
   .guide-wrapper {
     .section-content {
       .text-content {
         text-align: center;
+
+        .cw-sm-title {
+          color: #000;
+        }
       }
     }
   }
