@@ -279,6 +279,7 @@
   }
 
   .schedule-wrapper {
+    height: 100vh;
     min-height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -331,6 +332,10 @@
     .section-content {
       .text-content {
         text-align: center;
+
+        .cw-sm-title {
+          color: #000;
+        }
       }
     }
   }
