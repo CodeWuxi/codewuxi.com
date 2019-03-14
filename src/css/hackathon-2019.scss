@@ -278,46 +278,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .title-wrapper {
-      .title {
-        margin-bottom: .23rem;
-        font-size: .36rem;
-      }
-
-      p {
-        font-size: .15rem;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(120deg, #000, #000);
+      animation: schedule-color-load 1s ease-in;
+      // temp fixed color
+      h4, p {
+        color: #fff !important;
       }
     }
 
-    .schedule-block {
-      border: 1px solid #000;
-    }
+    .section-content {
+      color: #fff;
 
-    .schedule-list {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-
-      .schedule-item {
-        padding: 0.55rem;
-        background-color: #fff;
-        border-radius: 4px;
-
-        &:first-child {
-          margin-bottom: .4rem;
-        }
-
-        h5 {
-          color: #0D253E;
-          font-size: .3rem;
-        }
-
-        p {
-          color: #aaa;
-          font-size: .2rem;
+      .schedule-block-wrapper {
+        margin-top: .5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .text-content {
+          color: #fff;
         }
       }
+    }
+  }
+
+
+
+  @keyframes schedule-color-load {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
     }
   }
 
@@ -362,7 +359,7 @@
 }
 
 footer {
-  padding: 1rem 0 2rem 0;
+  padding: .5rem;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -427,6 +424,14 @@ footer {
       display: none;
     }
 
+    .hack-col-title {
+      display: none;
+    }
+
+    .transition-wrapper {
+      height: 2.5rem;
+    }
+
     .banner-wrapper {
       .container {
         .banner {
@@ -483,6 +488,17 @@ footer {
     }
 
     .schedule-wrapper {
+      .section-content {
+        .schedule-block-wrapper {
+          width: 80%;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          .text-content {
+            color: #fff;
+          }
+        }
+      }
     }
 
     .register-wrapper {
