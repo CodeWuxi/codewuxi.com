@@ -293,35 +293,39 @@
       }
     }
 
-    .schedule-block {
-      border: 1px solid #000;
-    }
+    // .schedule-block {
+    //   border: 1px solid #000;
+    // }
 
-    .schedule-list {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
+    // .schedule-list {
+    //   width: 40%;
+    //   display: flex;
+    //   flex-direction: column;
 
-      .schedule-item {
-        padding: 0.55rem;
-        background-color: #fff;
-        border-radius: 4px;
+    //   .schedule-item {
+    //     padding: 0.55rem;
+    //     background-color: #fff;
+    //     border-radius: 4px;
 
-        &:first-child {
-          margin-bottom: .4rem;
-        }
+    //     &:first-child {
+    //       margin-bottom: .4rem;
+    //     }
 
-        h5 {
-          color: #0D253E;
-          font-size: .3rem;
-        }
+    //     h5 {
+    //       color: #0D253E;
+    //       font-size: .3rem;
+    //     }
 
-        p {
-          color: #aaa;
-          font-size: .2rem;
-        }
-      }
-    }
+    //     p {
+    //       color: #aaa;
+    //       font-size: .2rem;
+    //     }
+    //   }
+    // }
+  }
+
+  .schedule-content-wrapper {
+    
   }
 
   .register-wrapper {
@@ -408,6 +412,14 @@ footer {
           }
         }
       }
+    }
+
+    .hack-col-title {
+      display: none;
+    }
+
+    .transition-wrapper {
+      height: 2.5rem;
     }
 
     .banner-wrapper {
