@@ -126,17 +126,6 @@ footer {
       margin-top: .2rem;
     }
   }
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   top: -.08rem;
-  //   left: -.2rem;
-  //   width: .17rem;
-  //   height: .17rem;
-  //   background-image: url('../assets/images/title.png');
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  // }
 }
 
 .cw-sm-title {
@@ -204,11 +193,11 @@ footer {
       bottom: 0.2rem;
       left: 50%;
       transform: translateX(-50%);
-      font-size: .3rem;
+      font-size: .5rem;
       cursor: pointer;
 
       &:hover {
-        color: red;
+        color: #ff4d4f;
       }
     }
     h3 {
@@ -225,17 +214,6 @@ footer {
     margin-bottom: 0rem;
     font-size: .56rem;
     line-height: .75rem;
-    &:after {
-      content: '';
-      position: absolute;
-      top: -.24rem;
-      left: -.6rem;
-      width: .51rem;
-      height: .51rem;
-      background-image: url('../assets/images/title.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
   }
 
   .cw-sm-title {
@@ -246,10 +224,14 @@ footer {
 
   .cw-dialog {
     .dialog-content {
-      width: 80%;
-      height: 4rem;
+      width: 100%;
+      height: 70vh;
+      top: auto;
+      left: 0;
+      bottom: 0;
+      transform: none;
       .icon-close {
-        // font-size: 28px;
+        font-size: 32px;
       }
     }
   }
@@ -258,22 +240,19 @@ footer {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
 
+  footer {
+    padding: 1rem 0;
+    .footer-copyright-wrapper {
+      font-size: 0.28rem;
+      font-weight: 300;
+    }
+  }
+
   .cw-title {
     margin-bottom: .4rem;
     font-size: .72rem;
     line-height: .75rem;
     letter-spacing: .09rem;
-    &:after {
-      content: '';
-      position: absolute;
-      top: -.08rem;
-      left: -.2rem;
-      width: .17rem;
-      height: .17rem;
-      background-image: url('../assets/images/title.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
   }
 
   .cw-sm-title {
@@ -290,6 +269,15 @@ footer {
 
     .container .row .col-xl-1 {
       max-height: .8rem;
+    }
+  }
+
+
+  footer {
+    padding: 1rem 0;
+
+    .footer-copyright-wrapper {
+      font-size: 0.28rem;
     }
   }
 
@@ -322,6 +310,14 @@ footer {
 @media (min-width: 992px) and (max-width: 1199.98px) {
   html {
     font-size: 625%;
+  }
+
+  footer {
+    .footer-copyright-wrapper {
+      text-align: center;
+      font-size: 0.21rem;
+      font-weight: 300;
+    }
   }
 
   .cw-title {

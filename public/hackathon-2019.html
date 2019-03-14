@@ -33,7 +33,7 @@
     <!-- ANIMATE END -->
 
     <!-- BANNER START -->
-    <section class="hack-col-title">
+    <section class="hack-col-title hidden-xs">
       Code&nbsp;Wuxi
     </section>
     <!-- ANIMATE END -->
@@ -242,40 +242,35 @@
                 日程安排
                 <!-- <i class="line line-bottom"></i> -->
               </h3>
-            </section>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 offset-sm-1 col-sm-6">
-            <section class="schedule-block section-content">
-              <div class="text-content">
-                <h4 style="font-size: 24px">第一天</h4>
-                <p>
-                  08:00—09:00 参赛者签到<br>
-                  10:00—11:00	开幕式<br>
-                  12:00—13:00	午餐<br>
-                  13:00—18:00	产品开发<br>
-                  18:00—19:00	晚餐<br>
-                  19:00—23:00	产品开发<br>
-                  23:00—24:00	夜宵<br>
-                </p>
-              </div>
-            </section>
-          </div>
-
-          <div class="col-12 offset-sm-5 col-sm-6">
-            <section class="schedule-block section-content">
-              <div class="text-content">
-                <h4 style="font-size: 24px">第二天</h4>
-                <p>
-                    00:00 —— 08:00	产品开发<br>
-                    08:00 —— 09:00	早餐<br>
-                    09:00 —— 12:00	产品开发+项目提交<br>
-                    12:00 —— 13:00	午餐，组委会审核产品<br>
-                    13:00 —— 15:00	项目路演<br>
-                    15:00 —— 16:00	评选并颁奖<br>
-                    16:00 —— 17:00	参赛者自有交流                    
-                </p>
+              <div class="schedule-block-wrapper">
+                <section class="schedule-block section-content">
+                  <div class="text-content">
+                    <h4 style="font-size: 24px">第一天</h4>
+                    <p>
+                      08:00—09:00 参赛者签到<br>
+                      10:00—11:00	开幕式<br>
+                      12:00—13:00	午餐<br>
+                      13:00—18:00	产品开发<br>
+                      18:00—19:00	晚餐<br>
+                      19:00—23:00	产品开发<br>
+                      23:00—24:00	夜宵<br>
+                    </p>
+                  </div>
+                </section>
+                <section class="schedule-block section-content">
+                  <div class="text-content">
+                    <h4 style="font-size: 24px">第二天</h4>
+                    <p>
+                      00:00—08:00	产品开发<br>
+                      08:00—09:00	早餐<br>
+                      09:00—12:00	产品开发，项目提交<br>
+                      12:00—13:00	午餐，项目预审<br>
+                      13:00—15:00	项目路演<br>
+                      15:00—16:00	评选并颁奖<br>
+                      16:00—17:00	参赛者自有交流
+                    </p>
+                  </div>
+                </section>
               </div>
             </section>
           </div>
@@ -372,7 +367,7 @@
                 <!-- <i class="line line-bottom"></i> -->
               </h3>
               <div class="row">
-                <div class="col-12 offset-sm-1 col-sm-10">
+                <div class="col-12">
                   <section class="section-content">
                     <div class="text-content">
                       <p>一个项目从想法到落地，离不开一个团队的努力。无论你是工程师、设计师，还是产品经理，抑或是充满想法的创客，都欢迎参加到 Hackathon 活动中来，一展才华！</p>
@@ -461,7 +456,7 @@
               </h3>
               <ul class="photo-wall">
                 <li class="logo-item">
-                  <img src="https://static-img.codewuxi.com/hackathon-2019/3wcoffee.png">
+                  <img src="https://static-img.codewuxi.com/hackathon-2019/3w.png">
                 </li>
                 <li class="logo-item">
                   <img src="https://static-img.codewuxi.com/hackathon-2019/duitang.png">
@@ -586,7 +581,7 @@
               <div class="text-content">
                 <h4 class="cw-sm-title">主办单位</h4>
                 <p>无锡市人才工作领导小组办公室</p>
-                <p>共青团无锡市委员会组织部</p>
+                <p>共青团无锡市委员会</p>
                 <h4 class="cw-sm-title">指导单位</h4>
                 <p>无锡市经济和信息化委员会</p>
                 <p>无锡市大数据管理局</p>
@@ -610,8 +605,8 @@
   <div class="cw-dialog" id="map-dialog">
     <div class="dialog-mask"></div>
     <div class="dialog-content">
+      <div id="baidu-map"></div>
       <i class="iconfont icon-close"></i>
-      <h3>地图</h3>
     </div>
   </div>
 
@@ -667,6 +662,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IGE83K9UHnRj1BQfMUd01wNGeNlHS8tC"></script>
+  <script>
+    var map = new BMap.Map("baidu-map");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(120.378589,31.49588), 11);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+      mapTypes:[
+        BMAP_NORMAL_MAP,
+        BMAP_HYBRID_MAP
+      ]}));
+    map.setCurrentCity("无锡");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+  </script>
 
 </body>
 
