@@ -85,7 +85,7 @@
 
         .logo-item {
           margin: .2rem;
-          height: 1rem;
+          height: .6rem;
           img {
             height: 100%;
           }
@@ -108,7 +108,14 @@
     z-index: 10;
     color: #444;
     &.turn-white {
-      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+
+    a {
+      color: #444;
+      text-decoration: none;
     }
   }
 
@@ -381,7 +388,7 @@ footer {
   .footer-logo-wrapper {
     .footer-logo {
       font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      font-size: .48rem;
+      font-size: .42rem;
       text-align: center;
     }
   }
@@ -691,6 +698,24 @@ footer {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .img-gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: grayscale(0%);
+      filter: none;
+    }
+  }
+
   .hack-2019-wrapper {
     .section-wrapper {
       .section-content {
@@ -754,7 +779,23 @@ footer {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .img-gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
 
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: grayscale(0%);
+      filter: none;
+    }
+  }
 }
 
 

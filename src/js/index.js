@@ -2,32 +2,32 @@ import '../css/index.scss'
 
 const $D = $(document)
 const $W = $(window)
-const ANIMATE_TIME = 8000
+const ANIMATE_TIME = 3000
+
 $D.ready(function () {
   var imageSwiper = new Swiper ('#image-swiper', {
-    direction: 'horizontal', // 垂直切换选项
-    loop: true, // 循环模式选项
-    // 如果需要分页器
+    speed: 1000,
+    direction: 'horizontal',
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
-      type: 'custom'
+      type: 'custom',
+      clickable :true
     },
     autoplay: {
       delay: ANIMATE_TIME
     },
     on:{
-      slideChangeTransitionEnd: function(){
+      slideChangeTransitionStart: function() {
         let activeIndex = $('.swiper-slide-active').data('swiper-slide-index')
-        let $activePagination = $(`.swiper-pagination-item[data-index="${activeIndex}"]`)
-        console.log(activeIndex);
+
+        startTextAnimate(activeIndex)
+      },
+      slideChangeTransitionEnd: function() {
+        let activeIndex = $('.swiper-slide-active').data('swiper-slide-index')
         startProgressAnimate(activeIndex)
       },
     },
-    // 如果需要前进后退按钮
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
   })
 })
 
@@ -37,4 +37,11 @@ const startProgressAnimate = (index) => {
 
   $('.swiper-pagintaion-progress').removeClass('progress-active')
   $progress.addClass('progress-active')
+}
+
+const startTextAnimate = (index) => {
+  let $text = $('.swiper-slide-active .swiper-text')
+
+  $('.swiper-text').removeClass('text-active')
+  $text.addClass('text-active')
 }
