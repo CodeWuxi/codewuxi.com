@@ -6,5 +6,62 @@
       margin: .27rem 0;
       font-weight: 200;
     }
-  };
+  }
+
+  .banner-wrapper {
+    .swiper-container {
+      width: 100vw;
+      padding-top: 33%;
+      .swiper-slide {
+        &[data-index='1'] {
+          background-color: rgb(235, 208, 208);
+        }
+        &[data-index='2'] {
+          background-color: rgb(162, 219, 157);
+        }
+        &[data-index='3'] {
+          background-color: rgb(201, 155, 178);
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        .swiper-pagination-item {
+          position: relative;
+          margin-right: .1rem;
+          width: .4rem;
+          height: .04rem;
+          border-radius: 0;
+          background-color: red;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .swiper-pagintaion-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+            &.progress-active {
+              animation: 8s progress linear;
+            transition: all 50ms linear;
+
+            }
+
+            @keyframes progress {
+              0% {
+                width: 0%;
+              }
+              100% {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -24,41 +24,58 @@
 <body>
 
   <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-1">
-          <i class="iconfont icon-codewuxi"></i>
-        </div>
-        <div class="col-xl-9">
-        </div>
-      </div>
-    </div>
+
   </header>
 
   <div class="index-wrapper">
     <!-- BANNER START -->
     <div class="section-wrapper banner-wrapper">
-      <div class="swiper-container">
+      <div id="image-swiper" class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide" data-index="1">Slide 1</div>
+          <div class="swiper-slide" data-index="2">Slide 2</div>
+          <div class="swiper-slide" data-index="3">Slide 3</div>
         </div>
 
-        <div class="swiper-pagination"></div>
+        <ul class="swiper-pagination">
+          <li class="swiper-pagination-item" data-index="0">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
+          <li class="swiper-pagination-item" data-index="1">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
+          <li class="swiper-pagination-item" data-index="2">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
+        </ul>
 
         <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
       </div>
-      <section class="carousel-wrapper">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+      <div id="text-swiper" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-index="1">text 1</div>
+          <div class="swiper-slide" data-index="2">text 2</div>
+          <div class="swiper-slide" data-index="3">text 3</div>
+        </div>
+
+        <ul class="swiper-pagination">
+          <li class="swiper-pagination-item" data-index="0">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
+          <li class="swiper-pagination-item" data-index="1">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
+          <li class="swiper-pagination-item" data-index="2">
+            <span class="swiper-pagintaion-progress"></span>
+          </li>
         </ul>
-      </section>
+
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
     </div>
     <!-- BANNER END -->
 
