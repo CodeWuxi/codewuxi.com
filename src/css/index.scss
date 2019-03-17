@@ -11,6 +11,36 @@ $swiper-time: 3s;
         text-align: justify;
       }
     }
+
+    .photo-wall {
+      margin: .18rem 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .photo-item {
+        padding: 0 .2rem;
+        width: 25%;
+        .photo-cover {
+          img {
+            width: 100%;
+          }
+        }
+
+        .photo-user {
+          margin: .2rem 0;
+          text-align: center;
+
+          h5 {
+            font-size: .24rem;
+          }
+          p {
+            font-size: .21rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
   }
 
   .banner-wrapper {
