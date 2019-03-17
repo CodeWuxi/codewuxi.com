@@ -8,6 +8,7 @@ const $scrollBar = $('.scroll-bar')
 const $scrollSlider = $('.scroll-slider')
 const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
+const $lineTitle = $('.cw-line-title')
 const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
@@ -97,23 +98,35 @@ $W.on('scroll', (e) => {
 
   // 滚动距离在标题的±100范围内
   switch (true) {
-    case (scrollT > (titlePos[0]-100) && scrollT <= (titlePos[0] + titleHeight[0])):
-      // console.log(`进入目标 0 区域`);
-      // setLineHeight(0, scrollT - (titlePos[0]-100))
+    // 简介
+    case (scrollT > (titlePos[0]-750) && scrollT <= (titlePos[0] + titleHeight[0])):
+      setLineHeight(0, scrollT - (titlePos[0]-750))
       break
-    case (scrollT > (titlePos[1]-100) && scrollT <= (titlePos[1] + titleHeight[1])):
-      // console.log(`进入目标 1 区域`);
-      // setLineHeight(1, scrollT - (titlePos[1]-100))
+    // 嘉宾评委
+    case (scrollT > (titlePos[1]-900) && scrollT <= (titlePos[1] + titleHeight[1])):
+      // console.log('嘉宾评委', titlePos[1]);
+      setLineHeight(1, scrollT - (titlePos[1]-900))
       break
-    case (scrollT > (titlePos[2]-100) && scrollT <= (titlePos[2] + titleHeight[2])):
-      // console.log(`进入目标 2 区域`);
-      // setLineHeight(2, scrollT - (titlePos[2]-100))
+    // 报名
+    case (scrollT > (titlePos[2]-750) && scrollT <= (titlePos[2] + titleHeight[2])):
+      // console.log('报名');
+      setLineHeight(2, scrollT - (titlePos[2]-750))
       break
-    case (scrollT > (titlePos[3]-100) && scrollT <= (titlePos[3] + titleHeight[3])):
-      // console.log(`进入目标 3 区域`);
-      // setLineHeight(3, scrollT - (titlePos[3]-100))
+    // 赞助商
+    case (scrollT > (titlePos[3]-750) && scrollT <= (titlePos[3] + titleHeight[3])):
+      // console.log('赞助商');
+      setLineHeight(3, scrollT - (titlePos[3]-750))
       break
-
+    // 合作伙伴
+    case (scrollT > (titlePos[4]-750) && scrollT <= (titlePos[4] + titleHeight[4])):
+      // console.log('合作伙伴');
+      setLineHeight(4, scrollT - (titlePos[3]-750))
+      break
+    // 媒体社区
+    case (scrollT > (titlePos[5]-750) && scrollT <= (titlePos[5] + titleHeight[5])):
+      // console.log('媒体社区');
+      setLineHeight(5, scrollT - (titlePos[5]-750))
+      break
   }
 
 
@@ -160,26 +173,30 @@ $W.on('scroll', (e) => {
 
 const setLineHeight = (index, dis) => {
   let height = 0
-  height = 250 - dis > 0 ? 250 - dis : 0
-  height = height > 250 ? 250 : height
+  dis =dis * 0.5
+  height = 200 - dis > 0 ? 200 - dis : 0
+  height = height > 200 ? 200 : height
 
-  $($title[index]).find('.line').css('height', `${height}px`)
+  $($lineTitle[index]).find('.line-top').css('height', `${height}px`)
 }
 
 function isInViewPort (element) {
   const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
   const top = element.getBoundingClientRect() && element.getBoundingClientRect().top
-  console.log('top', top)
+  // console.log('top', top)
   return top  <= viewPortHeight + 100
 }
 
 let titleMap = $title.map((idx,ele) => {
   let $ele = $(ele)
-  titlePos.push($ele.offset().top)
-  titleHeight.push($ele.outerHeight())
-  // console.log($ele.text(), $ele.offset().top, $ele.outerHeight())
   return $ele.text().trim()
 })
 
+$('.cw-line-title').map((idx,ele) => {
+  let $ele = $(ele)
+  titlePos.push($ele.offset().top)
+  titleHeight.push($ele.outerHeight())
+})
+
 // console.log(titleMap);
-console.log(titlePos, titleHeight);
+// console.log(titlePos, titleHeight);
