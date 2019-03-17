@@ -114,7 +114,8 @@ footer {
 }
 
 .cw-title {
-  margin-top: .5rem;
+  position: relative;
+  margin-top: .2rem;
   margin-bottom: .1rem;
   position: relative;
   display: flex;
@@ -126,12 +127,18 @@ footer {
   line-height: .67rem;
   letter-spacing: .09rem;
 
+  &.cw-line-title {
+    margin-top: 4rem;
+  }
   .line {
     z-index: 1;
-    width: 1px;
+    width: 2px;
     height: 2rem;
     background-color: #000;
     &.line-top {
+      position: absolute;
+      top: -2.5rem;
+      left: 50%;
       margin-bottom: .2rem;
     }
     &.line-bottom {
