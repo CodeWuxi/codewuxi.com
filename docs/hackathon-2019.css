@@ -18,6 +18,19 @@
 html {
   font-size: 315%; }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */ }
+
 body {
   background-color: #fff;
   color: #000;
@@ -37,20 +50,23 @@ body {
     font-weight: normal;
     margin: 0; }
   body ul, body li {
-    list-style: none; }
+    list-style: none;
+    margin: 0; }
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   padding: 0 1rem;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: .8rem; }
+  height: .8rem;
+  z-index: 99; }
   header .container .row .col-xl-1 {
     max-height: .8rem; }
   header .icon-codewuxi {
@@ -98,7 +114,8 @@ footer {
       text-decoration: none; }
 
 .cw-title {
-  margin-top: .5rem;
+  position: relative;
+  margin-top: .2rem;
   margin-bottom: .1rem;
   position: relative;
   display: -webkit-box;
@@ -119,12 +136,17 @@ footer {
   font-size: .48rem;
   line-height: .67rem;
   letter-spacing: .09rem; }
+  .cw-title.cw-line-title {
+    margin-top: 4rem; }
   .cw-title .line {
     z-index: 1;
-    width: 1px;
+    width: 2px;
     height: 2rem;
     background-color: #000; }
     .cw-title .line.line-top {
+      position: absolute;
+      top: -2.5rem;
+      left: 50%;
       margin-bottom: .2rem; }
     .cw-title .line.line-bottom {
       margin-top: .2rem; }
@@ -132,7 +154,8 @@ footer {
 .cw-sm-title {
   margin-top: 0.32rem;
   position: relative;
-  color: #fff;
+  color: #000;
+  text-align: center;
   font-size: .32rem;
   line-height: .64rem; }
 
@@ -382,7 +405,7 @@ footer {
           font-weight: 200; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall .logo-item {
         margin: .2rem;
-        height: 1rem; }
+        height: .6rem; }
         .hack-2019-wrapper .section-wrapper .section-content .photo-wall .logo-item img {
           height: 100%; }
 
@@ -402,8 +425,11 @@ footer {
   text-transform: uppercase;
   z-index: 10;
   color: #444; }
-  .hack-2019-wrapper .hack-col-title.turn-white {
+  .hack-2019-wrapper .hack-col-title.turn-white a {
     color: #fff; }
+  .hack-2019-wrapper .hack-col-title a {
+    color: #444;
+    text-decoration: none; }
 
 .hack-2019-wrapper .transition-wrapper {
   height: 2.5rem; }
@@ -633,7 +659,7 @@ footer {
   text-align: center; }
   footer .footer-logo-wrapper .footer-logo {
     font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    font-size: .48rem;
+    font-size: .42rem;
     text-align: center; }
   footer .footer-copyright-wrapper {
     text-align: center;
@@ -788,6 +814,22 @@ footer {
     display: none; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .img-gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: gray;
+            filter: gray; }
+    .img-gray:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: grayscale(0%);
+      -webkit-filter: none;
+              filter: none; }
   .hack-2019-wrapper .section-wrapper .section-content .text-content {
     font-size: .21rem;
     line-height: .42rem;
@@ -809,6 +851,24 @@ footer {
     top: 2rem;
     width: 0.03rem;
     background-color: #fff; } }
+
+@media (min-width: 1200px) {
+  .img-gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: gray;
+            filter: gray; }
+    .img-gray:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: grayscale(0%);
+      -webkit-filter: none;
+              filter: none; } }
 
 @-webkit-keyframes dash {
   to {
