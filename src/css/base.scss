@@ -9,6 +9,15 @@ html {
   font-size: 315%;
 }
 
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+  }
+
 body {
   background-color: #fff;
   color: #000;
@@ -34,6 +43,7 @@ body {
 
   ul, li {
     list-style: none;
+    margin: 0;
   }
 }
 
@@ -42,9 +52,11 @@ header {
   top: 0;
   left: 0;
   padding: 0 1rem;
+  width: 100vw;
   display: flex;
   align-items: center;
   height: .8rem;
+  z-index: 99;
 
   .container .row .col-xl-1 {
     max-height: .8rem;
@@ -102,7 +114,8 @@ footer {
 }
 
 .cw-title {
-  margin-top: .5rem;
+  position: relative;
+  margin-top: .2rem;
   margin-bottom: .1rem;
   position: relative;
   display: flex;
@@ -114,12 +127,18 @@ footer {
   line-height: .67rem;
   letter-spacing: .09rem;
 
+  &.cw-line-title {
+    margin-top: 4rem;
+  }
   .line {
     z-index: 1;
-    width: 1px;
+    width: 2px;
     height: 2rem;
     background-color: #000;
     &.line-top {
+      position: absolute;
+      top: -2.5rem;
+      left: 50%;
       margin-bottom: .2rem;
     }
     &.line-bottom {
@@ -131,7 +150,8 @@ footer {
 .cw-sm-title {
   margin-top: 0.32rem;
   position: relative;
-  color: #fff;
+  color: #000;
+  text-align: center;
   font-size: .32rem;
   line-height: .64rem;
 }
