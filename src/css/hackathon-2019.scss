@@ -46,42 +46,75 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
         .photo-item {
-          margin: 0 .2rem .3rem .2rem;
-          position: relative;
-          width: 20%;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
+          padding: 0 .2rem;
+          width: 25%;
           .photo-cover {
-            margin-bottom: .2rem;
-            padding-top: 100%;
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              z-index: -1;
+            img {
               width: 100%;
-              padding-bottom: 100%;
-              border-radius: 50%;
-              background-color: #d4c5f9;
-              background-image: url('../assets/images/IMG_6528.JPG');
-              background-repeat: no-repeat;
-              background-size: contain;
-              transform: translateY(-100%);
             }
           }
-
+  
           .photo-user {
+            margin: .2rem 0;
+            text-align: center;
+  
             h5 {
-              font-size: .27rem;
-              line-height: .3rem;
+              font-size: .24rem;
             }
             p {
+              margin: .1rem 0;
+              line-height: .24rem;
+              letter-spacing: .01rem;
+              text-align: justify;
+              font-size: .16rem;
               font-weight: 200;
+              color: #444;
+
+              &.photo-user-title {
+                text-align: center;
+                font-weight: 400;
+              }
             }
           }
         }
+        // .photo-item {
+        //   margin: 0 .2rem .3rem .2rem;
+        //   position: relative;
+        //   width: 20%;
+        //   display: flex;
+        //   flex-direction: column;
+        //   text-align: center;
+        //   .photo-cover {
+        //     margin-bottom: .2rem;
+        //     padding-top: 100%;
+        //     &:after {
+        //       content: "";
+        //       display: block;
+        //       position: absolute;
+        //       z-index: -1;
+        //       width: 100%;
+        //       padding-bottom: 100%;
+        //       border-radius: 50%;
+        //       background-color: #d4c5f9;
+        //       background-image: url('../assets/images/IMG_6528.JPG');
+        //       background-repeat: no-repeat;
+        //       background-size: contain;
+        //       transform: translateY(-100%);
+        //     }
+        //   }
+
+        //   .photo-user {
+        //     h5 {
+        //       font-size: .27rem;
+        //       line-height: .3rem;
+        //     }
+        //     p {
+        //       font-weight: 200;
+        //     }
+        //   }
+        // }
 
         .logo-item {
           margin: .2rem;
