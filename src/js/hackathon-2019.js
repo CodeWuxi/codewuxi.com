@@ -21,6 +21,19 @@ const winH = $W.height()
 
 let titlePos = []
 let titleHeight = []
+
+
+const baiduMap = () => {
+  var map = new BMap.Map("baidu-map");    // 创建Map实例
+  var point = new BMap.Point(120.378589,31.49588);  // 创建点坐标
+  map.centerAndZoom(point, 18);  // 初始化地图,设置中心点坐标和地图级别
+  map.addControl(new BMap.NavigationControl());
+  map.setCurrentCity("无锡");          // 设置地图显示的城市 此项是必须设置的
+  map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+  var marker = new BMap.Marker(point);        // 创建标注
+  map.addOverlay(marker);
+}
+
 const setScrollReveal = () => {
   window.sr = ScrollReveal();
 
@@ -79,6 +92,8 @@ const init = () => {
   }
   // setScrollReveal()
   setTextLogoAnime()
+
+  baiduMap()
 
   $mapButton.on('click', () => {
     // console.log('click');
@@ -152,7 +167,7 @@ $W.on('scroll', (e) => {
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
       break
-    case ($footerBlack.hasClass('active') && scrollT < (docH - winH - 200) && scrollT > winH):
+    case ($footerBlack.hasClass('active') && scrollT < (docH - winH - 100) && scrollT > winH):
       // console.log('out footer');
       $footerBlack.removeClass('active').fadeOut()
       $colTitle.removeClass('turn-white')

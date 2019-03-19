@@ -21,6 +21,10 @@
     margin: .3rem 0;
     position: relative;
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .section-content {
       display: flex;
       flex-direction: column;
@@ -299,6 +303,37 @@
         }
       }
     }
+
+    .other-award-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .other-award-item {
+        margin-top: .23rem;
+        width: 47%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 2px 2px 10px 0 rgba(0,0,0,.2);
+        .other-award-rank {
+          height: 100%;
+          background-color: #A8A8A8;
+          h4 {
+            padding: .2rem .3rem;
+            color: #fff;
+            font-size: .26rem;
+            white-space: nowrap;
+          }
+        }
+        p {
+          flex: 1;
+          font-size: 0.2rem;
+          font-weight: 200;
+          text-align: center;
+        }
+      }
+    }
   }
 
   .subjects-wrapper {
@@ -321,9 +356,6 @@
   .schedule-wrapper {
     height: 100vh;
     min-height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     &:after {
       position: absolute;
       z-index: -1;
@@ -369,7 +401,7 @@
   }
 
   .sponsors-wrapper, .partners-wrapper, .media-wrapper {
-    min-height: 55vh;
+    min-height: 70vh;
   }
 
   .guide-wrapper {
