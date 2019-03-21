@@ -67,11 +67,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       template: "./public/hackathon-2019.html",
-      filename: "./hackathon-2019.html"
+      filename: "./hackathon-2019.html",
+      chunks: ['hackathon-2019']
     }),
     new webpack.ProvidePlugin({
       $: "jquery"
@@ -80,10 +82,10 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs']),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'docs'),
     host: '0.0.0.0',
     port: 9090,
     inline: true,
