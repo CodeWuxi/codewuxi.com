@@ -471,15 +471,19 @@ footer {
         .photo-wall {
           margin: .18rem 0;
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
           .photo-item {
             margin: 0 .2rem .3rem .2rem;
+            width: 33%;
             .photo-cover {
             }
 
             .photo-user {
+              h5 {
+                font-size: .3rem;
+              }
+              p {
+                font-size: .22rem;
+              }
             }
           }
 
