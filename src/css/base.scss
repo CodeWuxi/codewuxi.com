@@ -164,6 +164,11 @@ footer {
 .cw-text-justify {
   text-align: justify;
   text-align-last: justify;
+  &::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
 }
 
 .cw-text-center {
@@ -234,11 +239,21 @@ footer {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  header {
+    padding: 0 .5rem;
+  }
+
   .cw-title {
     margin-top: .3rem;
     margin-bottom: 0rem;
     font-size: .56rem;
     line-height: .75rem;
+    &.cw-line-title {
+      margin-top: .3rem;
+      .line {
+        display: none;
+      }
+    }
   }
 
   .cw-sm-title {

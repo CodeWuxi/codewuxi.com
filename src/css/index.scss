@@ -96,14 +96,7 @@ $swiper-time: 3s;
             text-align: justify;
           }
 
-          @keyframes moveIn {
-            0% {
-              left: -8rem;
-            }
-            100% {
-              left: 4.5rem;
-            }
-          }
+
         }
 
         img {
@@ -153,8 +146,83 @@ $swiper-time: 3s;
   }
 }
 
+// @keyframes moveIn {
+//   0% {
+//     left: -8rem;
+//   }
+//   100% {
+//     left: 4.5rem;
+//   }
+// }
+@keyframes moveInPhone {
+  0% {
+    left: -8rem;
+  }
+  100% {
+    left: 1.5rem;
+  }
+}
+
 
 footer {
   height: auto;
+}
+
+@media (max-width: 575.98px) {
+  .index-wrapper {
+    .banner-wrapper {
+      .swiper-container {
+        .swiper-slide {
+          padding-top: 6.4rem;
+          background-image: url('https://static-img.codewuxi.com/index/banner/hackathon-2019-bg.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          .swiper-text {
+            left: -8rem;
+            &.text-active {
+              animation: .5s .5s moveInPhone forwards;
+            }
+            .banner_title {
+              margin-top: .3rem;
+              font-size: .7rem;
+              font-weight: 600;
+              line-height: 0.72rem;
+              text-align: justify;
+            }
+
+            .banner_subtitle {
+              font-size: .32rem;
+              line-height: .42rem;
+              letter-spacing: .02rem;
+            }
+
+            .banner_slogan {
+              margin-top: .3rem;
+              font-size: .55rem;
+              font-weight: 600;
+              line-height: .72rem;
+              text-align: justify;
+            }
+
+            .banner_info {
+              margin-top: .3rem;
+              font-size: .24rem;
+              line-height: .24rem;
+              text-align: justify;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          .swiper-pagination-item {
+            margin-right: .1rem;
+            width: .4rem;
+            height: .04rem;
+          }
+        }
+      }
+    }
+  }
+
 
 }
