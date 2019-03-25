@@ -77,6 +77,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 
   .footer-black {
     position: fixed;
@@ -93,6 +96,8 @@ footer {
 
   .footer-logo-wrapper {
     .footer-logo {
+      font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: .42rem;
       text-align: center;
     }
   }
