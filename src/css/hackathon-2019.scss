@@ -49,7 +49,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         .photo-item {
           padding: 0 .2rem;
@@ -59,11 +59,11 @@
               width: 100%;
             }
           }
-  
+
           .photo-user {
             margin: .2rem 0;
             text-align: center;
-  
+
             h5 {
               font-size: .24rem;
             }
@@ -446,22 +446,9 @@
 
 footer {
   padding: .5rem;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-
-  .footer-logo-wrapper {
-    .footer-logo {
-      font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      font-size: .42rem;
-      text-align: center;
-    }
-  }
 
   .footer-copyright-wrapper {
-    text-align: center;
     font-size: 0.18rem;
-    font-weight: 300;
   }
 }
 
@@ -484,15 +471,19 @@ footer {
         .photo-wall {
           margin: .18rem 0;
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
           .photo-item {
             margin: 0 .2rem .3rem .2rem;
+            width: 33%;
             .photo-cover {
             }
 
             .photo-user {
+              h5 {
+                font-size: .3rem;
+              }
+              p {
+                font-size: .22rem;
+              }
             }
           }
 
