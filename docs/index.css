@@ -89,7 +89,10 @@ footer {
           flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  text-align: center; }
   footer .footer-black {
     position: fixed;
     bottom: 0;
@@ -100,6 +103,8 @@ footer {
   footer .contact-wrapper, footer .container {
     z-index: 1; }
   footer .footer-logo-wrapper .footer-logo {
+    font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: .42rem;
     text-align: center; }
   footer .footer-copyright-wrapper {
     text-align: center;
@@ -162,6 +167,10 @@ footer {
 .cw-text-justify {
   text-align: justify;
   text-align-last: justify; }
+  .cw-text-justify::after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
 
 .cw-text-center {
   text-align: center !important; }
@@ -225,11 +234,17 @@ footer {
       text-align: center; }
 
 @media (max-width: 575.98px) {
+  header {
+    padding: 0 .5rem; }
   .cw-title {
     margin-top: .3rem;
     margin-bottom: 0rem;
     font-size: .56rem;
     line-height: .75rem; }
+    .cw-title.cw-line-title {
+      margin-top: .3rem; }
+      .cw-title.cw-line-title .line {
+        display: none; }
   .cw-sm-title {
     font-size: .42rem;
     font-weight: 600;
@@ -389,18 +404,6 @@ footer {
         font-size: .24rem;
         line-height: .24rem;
         text-align: justify; }
-
-@-webkit-keyframes moveIn {
-  0% {
-    left: -8rem; }
-  100% {
-    left: 4.5rem; } }
-
-@keyframes moveIn {
-  0% {
-    left: -8rem; }
-  100% {
-    left: 4.5rem; } }
     .index-wrapper .banner-wrapper .swiper-container .swiper-slide img {
       width: 100%;
       height: 100%; }
@@ -444,4 +447,56 @@ footer {
     width: 0%; }
   100% {
     width: 100%; } }
+
+@-webkit-keyframes moveInPhone {
+  0% {
+    left: -8rem; }
+  100% {
+    left: 1.5rem; } }
+
+@keyframes moveInPhone {
+  0% {
+    left: -8rem; }
+  100% {
+    left: 1.5rem; } }
+
+footer {
+  height: auto; }
+
+@media (max-width: 575.98px) {
+  .index-wrapper .banner-wrapper .swiper-container .swiper-slide {
+    padding-top: 6.4rem;
+    background-image: url("https://static-img.codewuxi.com/index/banner/hackathon-2019-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text {
+      left: -8rem; }
+      .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text.text-active {
+        -webkit-animation: .5s .5s moveInPhone forwards;
+                animation: .5s .5s moveInPhone forwards; }
+      .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text .banner_title {
+        margin-top: .3rem;
+        font-size: .7rem;
+        font-weight: 600;
+        line-height: 0.72rem;
+        text-align: justify; }
+      .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text .banner_subtitle {
+        font-size: .32rem;
+        line-height: .42rem;
+        letter-spacing: .02rem; }
+      .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text .banner_slogan {
+        margin-top: .3rem;
+        font-size: .55rem;
+        font-weight: 600;
+        line-height: .72rem;
+        text-align: justify; }
+      .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text .banner_info {
+        margin-top: .3rem;
+        font-size: .24rem;
+        line-height: .24rem;
+        text-align: justify; }
+  .index-wrapper .banner-wrapper .swiper-container .swiper-pagination .swiper-pagination-item {
+    margin-right: .1rem;
+    width: .4rem;
+    height: .04rem; } }
 

@@ -89,7 +89,10 @@ footer {
           flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  text-align: center; }
   footer .footer-black {
     position: fixed;
     bottom: 0;
@@ -100,6 +103,8 @@ footer {
   footer .contact-wrapper, footer .container {
     z-index: 1; }
   footer .footer-logo-wrapper .footer-logo {
+    font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: .42rem;
     text-align: center; }
   footer .footer-copyright-wrapper {
     text-align: center;
@@ -162,6 +167,10 @@ footer {
 .cw-text-justify {
   text-align: justify;
   text-align-last: justify; }
+  .cw-text-justify::after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
 
 .cw-text-center {
   text-align: center !important; }
@@ -225,11 +234,17 @@ footer {
       text-align: center; }
 
 @media (max-width: 575.98px) {
+  header {
+    padding: 0 .5rem; }
   .cw-title {
     margin-top: .3rem;
     margin-bottom: 0rem;
     font-size: .56rem;
     line-height: .75rem; }
+    .cw-title.cw-line-title {
+      margin-top: .3rem; }
+      .cw-title.cw-line-title .line {
+        display: none; }
   .cw-sm-title {
     font-size: .42rem;
     font-weight: 600;
@@ -379,9 +394,9 @@ footer {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
       .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
         padding: 0 .2rem;
         width: 25%; }
@@ -684,18 +699,9 @@ footer {
     background-color: #444; }
 
 footer {
-  padding: .5rem;
-  background-color: #000;
-  color: #fff;
-  text-align: center; }
-  footer .footer-logo-wrapper .footer-logo {
-    font-family: Comfortaa, lucida, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    font-size: .42rem;
-    text-align: center; }
+  padding: .5rem; }
   footer .footer-copyright-wrapper {
-    text-align: center;
-    font-size: 0.18rem;
-    font-weight: 300; }
+    font-size: 0.18rem; }
 
 @media (max-width: 575.98px) {
   .hack-2019-wrapper .section-wrapper .section-content .text-content {
@@ -706,17 +712,14 @@ footer {
       margin: .4rem 0; }
   .hack-2019-wrapper .section-wrapper .section-content .photo-wall {
     margin: .18rem 0;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    width: 100%; }
     .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item {
-      margin: 0 .2rem .3rem .2rem; }
+      margin: 0 .2rem .3rem .2rem;
+      width: 33%; }
+      .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item .photo-user h5 {
+        font-size: .3rem; }
+      .hack-2019-wrapper .section-wrapper .section-content .photo-wall .photo-item .photo-user p {
+        font-size: .22rem; }
     .hack-2019-wrapper .section-wrapper .section-content .photo-wall .logo-item {
       margin: .2rem;
       height: .6rem; }
