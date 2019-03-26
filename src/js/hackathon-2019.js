@@ -13,24 +13,34 @@ const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
 const $bannerCont = $('.banner-wrapper .container')
+const $schedule = $('.schedule-wrapper')
 const $mapButton = $('.show-map-button')
+const $roadButton = $('.show-road-button')
+const $registerButton = $('.register-now-button')
 const $mapDialog = $('#map-dialog')
+const $roadDialog = $('#road-dialog')
+const $registerDialog = $('#register-dialog')
 const $closeBtn = $('.cw-dialog .icon-close')
 const docH = $D.outerHeight(true)
 const winH = $W.height()
+const winW = $W.width()
 
 let titlePos = []
 let titleHeight = []
-
+const scheduleX = $schedule.offset().top
+const scheduleHeight = $schedule.offset().top + $schedule.outerHeight()
 
 const baiduMap = () => {
-  var map = new BMap.Map("baidu-map");    // 创建Map实例
-  var point = new BMap.Point(120.378589,31.49588);  // 创建点坐标
-  map.centerAndZoom(point, 18);  // 初始化地图,设置中心点坐标和地图级别
+  const mapW = (winW * 0.8) / 2
+  const mapH = (winH * 0.8) / 2
+  var map = new BMap.Map("baidu-map");
+  var point = new BMap.Point(120.378589,31.49588);
+  map.centerAndZoom(point, 18);
   map.addControl(new BMap.NavigationControl());
-  map.setCurrentCity("无锡");          // 设置地图显示的城市 此项是必须设置的
-  map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
-  var marker = new BMap.Marker(point);        // 创建标注
+  map.setCurrentCity("无锡");
+  map.enableScrollWheelZoom(false);
+  var marker = new BMap.Marker(point);
+  map.panBy(mapW, mapH);//中心点偏移
   map.addOverlay(marker);
 }
 
@@ -96,20 +106,37 @@ const init = () => {
   baiduMap()
 
   $mapButton.on('click', () => {
-    // console.log('click');
     $mapDialog.fadeIn()
   })
-  $closeBtn.on('click', () => {
-    $mapDialog.fadeOut()
+  $roadButton.on('click', () => {
+    $roadDialog.fadeIn()
   })
+  $registerButton.on('click', () => {
+    $registerDialog.fadeIn()
+  })
+  $closeBtn.on('click', () => {
+    $('.cw-dialog').fadeOut()
+  })
+
 }
+
+$('.cw-dialog').mouseup(function (e) {
+  var _con = $('.dialog-content')
+  if(!_con.is(e.target) && _con.has(e.target).length === 0) {
+    $('.cw-dialog').fadeOut()
+  }
+})
 
 init()
 
 $W.on('scroll', (e) => {
   let scrollT = $W.scrollTop()
   let scrollScale = (scrollT / (docH - winH)) * 100
-  // console.log(scrollT);
+  let scheduleTop = scheduleX - scrollT
+  let colTileBottom =  scrollT + $colTitle.outerHeight()/2 + 150
+  let scrollBarBottom =  scrollT + $scrollBar.outerHeight()/2 + 200
+  let colTileTop =  scrollT - $scrollBar.outerHeight()/2 + 150
+  let scrollBarTop =  scrollT -  $scrollBar.outerHeight()/2 + 200
 
   // 滚动距离在标题的±100范围内
   switch (true) {
@@ -143,7 +170,6 @@ $W.on('scroll', (e) => {
       setLineHeight(5, scrollT - (titlePos[5]-750))
       break
   }
-
 
   switch (true) {
     case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4) && scrollT < winH):
@@ -182,6 +208,19 @@ $W.on('scroll', (e) => {
       break
   }
 
+  if (colTileBottom >= 2926 && colTileBottom < scheduleHeight) {
+    $colTitle.addClass('turn-white')
+  }
+  if (colTileBottom >= scheduleHeight) {
+    $colTitle.removeClass('turn-white')
+  }
+
+  if (scrollBarBottom >= 2926 && scrollBarBottom < scheduleHeight) {
+    $scrollBar.addClass('turn-white')
+  }
+  if (scrollBarBottom >= scheduleHeight) {
+    $scrollBar.removeClass('turn-white')
+  }
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
 })
@@ -212,6 +251,7 @@ $('.cw-line-title').map((idx,ele) => {
   titlePos.push($ele.offset().top)
   titleHeight.push($ele.outerHeight())
 })
+
 
 // console.log(titleMap);
 // console.log(titlePos, titleHeight);
