@@ -5,8 +5,11 @@
   height: 100%;
 }
 
-.hack-2019-wrapper {
+header {
+  display: none;
+}
 
+.hack-2019-wrapper {
   .banner-black {
     position: fixed;
     top: 0;
@@ -255,6 +258,10 @@
       border-top: 1px solid #000;
       font-size: .21rem;
     }
+
+    .button-group {
+      width: 40%;
+    }
   }
 
   .awards-wrapper {
@@ -455,6 +462,9 @@ footer {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  header {
+    display: flex;
+  }
   .hack-2019-wrapper {
     .section-wrapper {
       .section-content {
@@ -550,6 +560,9 @@ footer {
         border-top: 1px solid #000;
         font-size: .25rem;
       }
+      .button-group {
+        width: 60%;
+      }
     }
 
     .awards-wrapper {
@@ -560,6 +573,29 @@ footer {
         .award-item {
           margin-bottom: .4rem;
           width: 80%;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .other-award-list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        .other-award-item {
+          margin-top: .4rem;
+          width: 68%;
+          .other-award-rank {
+            h4 {
+              padding: .2rem .3rem;
+              font-size: .26rem;
+            }
+          }
+          p {
+            font-size: 0.2rem;
+            font-weight: 200;
+            white-space: nowrap;
+          }
         }
       }
     }
