@@ -9,6 +9,7 @@ const $scrollSlider = $('.scroll-slider')
 const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
 const $lineTitle = $('.cw-line-title')
+const $line = $('.line')
 const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
@@ -172,20 +173,22 @@ $W.on('scroll', (e) => {
   }
 
   switch (true) {
-    case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4) && scrollT < winH):
+    case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 3) && scrollT < winH):
       // console.log('out banner');
       $bannerBlack.fadeOut()
       $footerBlack.removeClass('active').fadeOut()
       $bannerCont.css('opacity', 0)
       $colTitle.removeClass('turn-white')
       $scrollBar.removeClass('turn-white')
+      $line.css('background-color', '#000')
       break
-    case (scrollT <= (winH / 4)):
-      // console.log('in banner');
+    case (scrollT <= (winH / 3)):
+    // console.log('in banner');
       $bannerBlack.fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
       $bannerCont.css('opacity', 1)
+      $line.css('background-color', '#fff')
       break
     case (scrollT > (docH - winH - 200)):
       // console.log('footer');

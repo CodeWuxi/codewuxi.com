@@ -149,11 +149,11 @@ footer {
   .line {
     z-index: 1;
     width: 2px;
-    height: 2rem;
-    background-color: #000;
+    height: 4rem;
+    background-color: #fff;
     &.line-top {
       position: absolute;
-      top: -2.5rem;
+      top: -4rem;
       left: 50%;
       margin-bottom: .2rem;
     }
