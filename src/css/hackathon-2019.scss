@@ -6,10 +6,16 @@
 }
 
 header {
-  display: none;
+  // display: none;
+  .header-right {
+    .icon-menu {
+      // display: none;
+    }
+  }
 }
 
 .hack-2019-wrapper {
+  margin-top: .8rem;
   .banner-black {
     position: fixed;
     top: 0;
@@ -466,6 +472,7 @@ footer {
   header {
     display: flex;
   }
+
   .hack-2019-wrapper {
     .section-wrapper {
       .section-content {
