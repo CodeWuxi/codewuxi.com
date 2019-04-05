@@ -13,10 +13,16 @@ body {
 }
 
 header {
-  display: none;
+  // display: none;
+  .header-right {
+    .icon-menu {
+      display: none;
+    }
+  }
 }
 
 .hack-2019-wrapper {
+  margin-top: .8rem;
   .banner-black {
     position: fixed;
     top: 0;
@@ -326,7 +332,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      
+
       .other-award-item {
         margin-top: .23rem;
         width: 47%;
@@ -484,7 +490,13 @@ footer {
 @media (max-width: 575.98px) {
   header {
     display: flex;
+    .header-right {
+      .icon-menu {
+        display: flex;
+      }
+    }
   }
+
   .hack-2019-wrapper {
     .section-wrapper {
       .section-content {
@@ -616,6 +628,11 @@ footer {
             font-weight: 200;
             white-space: nowrap;
           }
+        }
+      }
+      .award-comments {
+        p {
+          line-height: .28rem;
         }
       }
     }

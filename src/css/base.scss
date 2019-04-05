@@ -53,15 +53,27 @@ header {
   left: 0;
   padding: 0 1rem;
   width: 100vw;
-  height: .8rem;
+  height: .6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #000;
   color: #fff;
   z-index: 99;
 
-  .container .row .col-xl-1 {
-    max-height: .8rem;
+  .header-right {
+    display: flex;
+    align-items: center;
+    font-size: .18rem;
+
+    ul {
+      display: flex;
+      overflow: hidden;
+      li {
+        margin-right: .2rem;
+        cursor: pointer;
+      }
+    }
   }
   .icon-codewuxi {
     display: inline-block;
@@ -263,6 +275,32 @@ footer {
 @media (max-width: 575.98px) {
   header {
     padding: 0 .5rem;
+
+    .header-right {
+      position: relative;
+      .header-menu {
+        display: none;
+        position: absolute;
+        top: .5rem;
+        right: 0;
+        background-color: #000;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li {
+          margin-right: 0;
+          padding: .2rem .3rem;
+          text-align: center;
+        }
+      }
+      .sign-up-btn {
+        margin-right: .2rem;
+      }
+      .icon-menu {
+        display: block;
+      }
+    }
   }
 
   .cw-title {
