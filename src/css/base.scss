@@ -68,6 +68,7 @@ header {
 
     ul {
       display: flex;
+      overflow: hidden;
       li {
         margin-right: .2rem;
         cursor: pointer;
@@ -278,13 +279,20 @@ footer {
     .header-right {
       position: relative;
       .header-menu {
+        display: none;
         position: absolute;
-        top: .6rem;
+        top: .5rem;
         right: 0;
         background-color: #000;
-        // display: none;
+        text-align: center;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
+        li {
+          margin-right: 0;
+          padding: .2rem .3rem;
+          text-align: center;
+        }
       }
       .sign-up-btn {
         margin-right: .2rem;

@@ -4,12 +4,19 @@ import '../css/hackathon-2019.scss'
 const $D = $(document)
 const $W = $(window)
 const $body = $('body')
+
+const $header = $('header')
+const $menuBtn = $header.find('.icon-menu')
+const $menu = $header.find('.header-menu')
+
 const $scrollBar = $('.scroll-bar')
 const $scrollSlider = $('.scroll-slider')
+
 const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
 const $lineTitle = $('.cw-line-title')
 const $line = $('.line')
+
 const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
@@ -120,6 +127,10 @@ const init = () => {
   })
 
 }
+
+$menuBtn.on('click', () => {
+  $menu.slideToggle()
+})
 
 $('.cw-dialog').mouseup(function (e) {
   var _con = $('.dialog-content')
