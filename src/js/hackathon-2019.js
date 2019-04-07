@@ -42,7 +42,7 @@ const baiduMap = () => {
   const mapW = (winW * 0.8) / 2
   const mapH = (winH * 0.8) / 2
   var map = new BMap.Map("baidu-map");
-  var point = new BMap.Point(120.378589,31.49588);
+  var point = new BMap.Point(120.372702,31.498621);
   map.centerAndZoom(point, 18);
   map.addControl(new BMap.NavigationControl());
   map.setCurrentCity("无锡");
