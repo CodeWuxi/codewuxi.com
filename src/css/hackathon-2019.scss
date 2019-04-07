@@ -939,3 +939,11 @@ footer {
     stroke-dashoffset: 0;
   }
 }
+
+// TODO: temp css for side bar menu
+.side-nav-content {
+  display: none;
+  li {
+    min-width: 250px;
+  }
+}

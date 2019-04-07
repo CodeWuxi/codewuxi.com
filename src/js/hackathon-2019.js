@@ -33,6 +33,8 @@ const docH = $D.outerHeight(true)
 const winH = $W.height()
 const winW = $W.width()
 
+const sideNav = $('.side-nav-content')
+
 let titlePos = []
 let titleHeight = []
 const scheduleX = $schedule.offset().top
@@ -150,6 +152,8 @@ $W.on('scroll', (e) => {
   let colTileTop =  scrollT - $scrollBar.outerHeight()/2 + 150
   let scrollBarTop =  scrollT -  $scrollBar.outerHeight()/2 + 200
 
+  sideNav.css('display', 'block')
+
   // 滚动距离在标题的±100范围内
   switch (true) {
     // 简介
@@ -185,7 +189,6 @@ $W.on('scroll', (e) => {
 
   switch (true) {
     case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 3) && scrollT < winH):
-      // console.log('out banner');
       $bannerBlack.fadeOut()
       $footerBlack.removeClass('active').fadeOut()
       $bannerCont.css('opacity', 0)
@@ -194,7 +197,6 @@ $W.on('scroll', (e) => {
       $line.css('background-color', '#000')
       break
     case (scrollT <= (winH / 3)):
-    // console.log('in banner');
       $bannerBlack.fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
@@ -202,13 +204,11 @@ $W.on('scroll', (e) => {
       $line.css('background-color', '#fff')
       break
     case (scrollT > (docH - winH - 200)):
-      // console.log('footer');
       $footerBlack.addClass('active').fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
       break
     case ($footerBlack.hasClass('active') && scrollT < (docH - winH - 100) && scrollT > winH):
-      // console.log('out footer');
       $footerBlack.removeClass('active').fadeOut()
       $colTitle.removeClass('turn-white')
       $scrollBar.removeClass('turn-white')
@@ -222,14 +222,14 @@ $W.on('scroll', (e) => {
       break
   }
 
-  if (colTileBottom >= 2926 && colTileBottom < scheduleHeight) {
+  if (colTileBottom > 2926 && colTileBottom < scheduleHeight) {
     $colTitle.addClass('turn-white')
   }
   if (colTileBottom >= scheduleHeight) {
     $colTitle.removeClass('turn-white')
   }
 
-  if (scrollBarBottom >= 2926 && scrollBarBottom < scheduleHeight) {
+  if (scrollBarBottom > 3340 && scrollBarBottom < scheduleHeight) {
     $scrollBar.addClass('turn-white')
   }
   if (scrollBarBottom >= scheduleHeight) {
