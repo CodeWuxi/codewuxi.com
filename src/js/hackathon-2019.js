@@ -4,11 +4,19 @@ import '../css/hackathon-2019.scss'
 const $D = $(document)
 const $W = $(window)
 const $body = $('body')
+
+const $header = $('header')
+const $menuBtn = $header.find('.icon-menu')
+const $menu = $header.find('.header-menu')
+
 const $scrollBar = $('.scroll-bar')
 const $scrollSlider = $('.scroll-slider')
+
 const $colTitle = $('.hack-col-title')
 const $title = $('.cw-title')
 const $lineTitle = $('.cw-line-title')
+const $line = $('.line')
+
 const $bannerBlack = $('.banner-black')
 const $footerBlack = $('.footer-black')
 const $bannerWrap = $('.banner-wrapper')
@@ -25,6 +33,16 @@ const docH = $D.outerHeight(true)
 const winH = $W.height()
 const winW = $W.width()
 
+// ----------------------------------------
+const $sideNav = $('.side-nav-content')
+const $sectionWrapper = $('.section-wrapper')
+const $scheduleWrapperSection = $('#schedule-wrapper-section')
+const $navMenu = $('.side-nav-content')
+const $headerMenu = $('.header-menu')
+const $guideWrapper = $('.guide-wrapper')
+const $signUpBtn = $('.sign-up-btn')
+const $contractWrapper = $('.contact-wrapper')
+
 let titlePos = []
 let titleHeight = []
 const scheduleX = $schedule.offset().top
@@ -34,7 +52,7 @@ const baiduMap = () => {
   const mapW = (winW * 0.8) / 2
   const mapH = (winH * 0.8) / 2
   var map = new BMap.Map("baidu-map");
-  var point = new BMap.Point(120.378589,31.49588);
+  var point = new BMap.Point(120.372702,31.498621);
   map.centerAndZoom(point, 18);
   map.addControl(new BMap.NavigationControl());
   map.setCurrentCity("无锡");
@@ -120,6 +138,13 @@ const init = () => {
 
 }
 
+$menuBtn.on('click', () => {
+  $menu.slideToggle()
+})
+
+// side bar menu Toggle
+
+
 $('.cw-dialog').mouseup(function (e) {
   var _con = $('.dialog-content')
   if(!_con.is(e.target) && _con.has(e.target).length === 0) {
@@ -137,6 +162,9 @@ $W.on('scroll', (e) => {
   let scrollBarBottom =  scrollT + $scrollBar.outerHeight()/2 + 200
   let colTileTop =  scrollT - $scrollBar.outerHeight()/2 + 150
   let scrollBarTop =  scrollT -  $scrollBar.outerHeight()/2 + 200
+
+
+
 
   // 滚动距离在标题的±100范围内
   switch (true) {
@@ -172,55 +200,85 @@ $W.on('scroll', (e) => {
   }
 
   switch (true) {
-    case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 4) && scrollT < winH):
-      // console.log('out banner');
+    case (!$bannerWrap.hasClass('turn-white') && scrollT > (winH / 3) && scrollT < winH):
       $bannerBlack.fadeOut()
+      $headerMenu.fadeOut()
+      $signUpBtn.addClass('sign-up-btn-black')
       $footerBlack.removeClass('active').fadeOut()
       $bannerCont.css('opacity', 0)
       $colTitle.removeClass('turn-white')
       $scrollBar.removeClass('turn-white')
+      $line.css('background-color', '#000')
+      $navMenu.removeClass('turn-white')
+      // side nav menu display
+      $sideNav.fadeIn()
       break
-    case (scrollT <= (winH / 4)):
-      // console.log('in banner');
+    case (scrollT <= (winH / 3)):
       $bannerBlack.fadeIn()
+      $headerMenu.fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
       $bannerCont.css('opacity', 1)
+      $line.css('background-color', '#fff')
+      $navMenu.addClass('turn-white')
+      // side nav fadeOut
+      $sideNav.fadeOut()
+      $signUpBtn.removeClass('sign-up-btn-black')
       break
     case (scrollT > (docH - winH - 200)):
-      // console.log('footer');
       $footerBlack.addClass('active').fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
+      $navMenu.addClass('turn-white')
       break
     case ($footerBlack.hasClass('active') && scrollT < (docH - winH - 100) && scrollT > winH):
-      // console.log('out footer');
       $footerBlack.removeClass('active').fadeOut()
       $colTitle.removeClass('turn-white')
       $scrollBar.removeClass('turn-white')
       $bannerBlack.fadeOut()
+      $navMenu.removeClass('turn-white')
       break
     default:
       $bannerBlack.fadeOut()
       $footerBlack.removeClass('active').fadeOut()
       $colTitle.removeClass('turn-white')
       $scrollBar.removeClass('turn-white')
+      $navMenu.removeClass('turn-white')
       break
   }
 
-  if (colTileBottom >= 2926 && colTileBottom < scheduleHeight) {
+  if (colTileBottom > 2926 && colTileBottom < scheduleHeight) {
     $colTitle.addClass('turn-white')
   }
   if (colTileBottom >= scheduleHeight) {
     $colTitle.removeClass('turn-white')
   }
 
-  if (scrollBarBottom >= 2926 && scrollBarBottom < scheduleHeight) {
+  if (scrollBarBottom > ($bannerBlack.height() +  $sectionWrapper.height() * 2.5 + $scrollBar.height()/2) && scrollBarBottom < scheduleHeight) {
     $scrollBar.addClass('turn-white')
+    $navMenu.addClass('turn-white')
   }
   if (scrollBarBottom >= scheduleHeight) {
     $scrollBar.removeClass('turn-white')
+    $navMenu.removeClass('turn-white')
   }
+  if (($scrollBar.offset().top + $scrollBar.height() - scrollT) - ($contractWrapper.offset().top - scrollT) > 0) {
+    $scrollBar.addClass('turn-white')
+    $navMenu.addClass('turn-white')
+    $colTitle.addClass('turn-white')
+  }
+
+  // -----------------------------------------------
+  if ((scrollT - $schedule.offset().top) > 0) {
+    $signUpBtn.removeClass('sign-up-btn-black')
+  }
+  if ((scrollT - $('.guests-wrapper').offset().top) > 0) {
+    $signUpBtn.addClass('sign-up-btn-black')
+  }
+  if ((scrollT + $header.height() - $contractWrapper.offset().top) > 0) {
+    $signUpBtn.removeClass('sign-up-btn-black')
+  }
+  // -------------------------------------------------
 
   $scrollSlider.css('height', `${100 - scrollScale}%`)
 })
