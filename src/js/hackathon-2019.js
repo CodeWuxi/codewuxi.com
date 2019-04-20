@@ -139,8 +139,6 @@ const init = () => {
   })
 }
 
-console.log($menuBtn);
-
 $menuBtn.on('click', () => {
   $phoneMenu.slideDown(400)
   $phoneMenu.addClass('active')
