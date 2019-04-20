@@ -38,7 +38,9 @@ const $sideNav = $('.side-nav-content')
 const $sectionWrapper = $('.section-wrapper')
 const $scheduleWrapperSection = $('#schedule-wrapper-section')
 const $navMenu = $('.side-nav-content')
+const $phoneMenu = $('.phone-menu')
 const $headerMenu = $('.header-menu')
+const $closeMenu = $header.find('.icon-closeBtn')
 const $guideWrapper = $('.guide-wrapper')
 const $signUpBtn = $('.sign-up-btn')
 const $contractWrapper = $('.contact-wrapper')
@@ -135,11 +137,18 @@ const init = () => {
   $closeBtn.on('click', () => {
     $('.cw-dialog').fadeOut()
   })
-
 }
 
+console.log($menuBtn);
+
 $menuBtn.on('click', () => {
-  $menu.slideToggle()
+  $phoneMenu.slideDown(400)
+  $phoneMenu.addClass('active')
+})
+
+$closeMenu.on('click', () => {
+  $phoneMenu.slideUp(400)
+  $phoneMenu.removeClass('active')
 })
 
 // side bar menu Toggle
