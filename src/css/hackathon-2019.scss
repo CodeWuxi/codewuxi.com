@@ -983,8 +983,17 @@ footer {
 .sign-up-btn {
   padding: 0 15px 0 15px;
   border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 200;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+  }
 }
-a.sign-up-btn-black {
+.sign-up-btn-black {
   padding: 0 15px 0 15px;
   border: 1px solid #000000;
   color: #000000 !important;
