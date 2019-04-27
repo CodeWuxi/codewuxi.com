@@ -113,7 +113,7 @@ header {
     display: inline-block;
     width: 0.38rem;
     height: 0.38rem;
-    background-image: url('../assets/images/codewuxi.png');
+    // background-image: url('../assets/images/codewuxi.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -227,7 +227,7 @@ footer {
   &::after {
     content: '';
     width: 100%;
-    display: inline-block;
+    // display: inline-block;
   }
 }
 
@@ -303,8 +303,17 @@ footer {
       }
     }
     h3 {
+      margin: .3rem 0 .4rem 0;
+      padding-bottom: .1rem;
+      font-size: .32rem;
+    }
+    h4 {
+      margin: .3rem 0 .1rem 0;
       font-size: .24rem;
-      text-align: center;
+    }
+    p {
+      font-size: .24rem;
+      font-weight: 200;
     }
   }
 }
