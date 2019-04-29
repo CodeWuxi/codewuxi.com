@@ -131,9 +131,9 @@ const init = () => {
   $roadButton.on('click', () => {
     $roadDialog.fadeIn()
   })
-  $registerButton.on('click', () => {
-    $registerDialog.fadeIn()
-  })
+  // $registerButton.on('click', () => {
+  //   $registerDialog.fadeIn()
+  // })
   $closeBtn.on('click', () => {
     $('.cw-dialog').fadeOut()
   })
