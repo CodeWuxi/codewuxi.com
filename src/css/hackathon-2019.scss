@@ -13,14 +13,33 @@ body {
 }
 
 header {
-  // display: none;
   opacity: 1;
-  background-color: unset;
   .header-right {
     .icon-menu {
       display: none;
     }
   }
+
+  // sign up button
+  .sign-up-btn {
+    padding: 0 15px 0 15px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 200;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #000;
+    }
+  }
+  .sign-up-btn-black {
+    padding: 0 15px 0 15px;
+    border: 1px solid #000000;
+    color: #000000;
+  }
+
 }
 
 // a tag anchor
@@ -503,7 +522,6 @@ footer {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   header {
-    display: flex;
     .header-right {
       .icon-menu {
         display: flex;
@@ -977,15 +995,4 @@ footer {
       color: #000;
     }
   }
-}
-
-// sign up button
-.sign-up-btn {
-  padding: 0 15px 0 15px;
-  border: 1px solid #fff;
-}
-a.sign-up-btn-black {
-  padding: 0 15px 0 15px;
-  border: 1px solid #000000;
-  color: #000000 !important;
 }

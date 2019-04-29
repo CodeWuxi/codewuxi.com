@@ -38,7 +38,9 @@ const $sideNav = $('.side-nav-content')
 const $sectionWrapper = $('.section-wrapper')
 const $scheduleWrapperSection = $('#schedule-wrapper-section')
 const $navMenu = $('.side-nav-content')
+const $phoneMenu = $('.phone-menu')
 const $headerMenu = $('.header-menu')
+const $closeMenu = $header.find('.icon-closeBtn')
 const $guideWrapper = $('.guide-wrapper')
 const $signUpBtn = $('.sign-up-btn')
 const $contractWrapper = $('.contact-wrapper')
@@ -52,7 +54,7 @@ const baiduMap = () => {
   const mapW = (winW * 0.8) / 2
   const mapH = (winH * 0.8) / 2
   var map = new BMap.Map("baidu-map");
-  var point = new BMap.Point(120.372702,31.498621);
+  var point = new BMap.Point(120.36356,31.592626);
   map.centerAndZoom(point, 18);
   map.addControl(new BMap.NavigationControl());
   map.setCurrentCity("无锡");
@@ -135,11 +137,16 @@ const init = () => {
   $closeBtn.on('click', () => {
     $('.cw-dialog').fadeOut()
   })
-
 }
 
 $menuBtn.on('click', () => {
-  $menu.slideToggle()
+  $phoneMenu.slideDown(400)
+  $phoneMenu.addClass('active')
+})
+
+$closeMenu.on('click', () => {
+  $phoneMenu.slideUp(400)
+  $phoneMenu.removeClass('active')
 })
 
 // side bar menu Toggle
