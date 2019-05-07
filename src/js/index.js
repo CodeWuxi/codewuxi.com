@@ -6,6 +6,7 @@ const ANIMATE_TIME = 3000
 
 $D.ready(function () {
   var imageSwiper = new Swiper ('#image-swiper', {
+    init: false,
     speed: 1000,
     direction: 'horizontal',
     loop: true,
