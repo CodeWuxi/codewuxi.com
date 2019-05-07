@@ -171,8 +171,6 @@ $W.on('scroll', (e) => {
   let scrollBarTop =  scrollT -  $scrollBar.outerHeight()/2 + 200
 
 
-
-
   // 滚动距离在标题的±100范围内
   switch (true) {
     // 简介
@@ -233,6 +231,8 @@ $W.on('scroll', (e) => {
       $signUpBtn.removeClass('sign-up-btn-black')
       break
     case (scrollT > (docH - winH - 200)):
+      $headerMenu.fadeOut()
+      $sideNav.fadeIn()
       $footerBlack.addClass('active').fadeIn()
       $colTitle.addClass('turn-white')
       $scrollBar.addClass('turn-white')
@@ -246,6 +246,8 @@ $W.on('scroll', (e) => {
       $navMenu.removeClass('turn-white')
       break
     default:
+      $headerMenu.fadeOut()
+      $sideNav.fadeIn()
       $bannerBlack.fadeOut()
       $footerBlack.removeClass('active').fadeOut()
       $colTitle.removeClass('turn-white')
@@ -276,8 +278,11 @@ $W.on('scroll', (e) => {
   }
 
   // -----------------------------------------------
-  if ((scrollT - $schedule.offset().top) > 0) {
+  if ((scrollT - $schedule.offset().top) > -10) {
     $signUpBtn.removeClass('sign-up-btn-black')
+  }
+  if ((scrollT - $schedule.offset().top) < -$signUpBtn.outerHeight() && scrollT > winH) {
+    $signUpBtn.addClass('sign-up-btn-black')
   }
   if ((scrollT - $('.guests-wrapper').offset().top) > 0) {
     $signUpBtn.addClass('sign-up-btn-black')
