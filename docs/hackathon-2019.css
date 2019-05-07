@@ -255,7 +255,8 @@ footer {
   outline: none;
   -webkit-transition: all .5s;
   transition: all .5s;
-  white-space: nowrap; }
+  white-space: nowrap;
+  color: #000; }
   .cw-button.button-black {
     width: 2rem;
     border: 1px solid #fff;
@@ -980,22 +981,6 @@ footer {
             justify-content: space-between; }
     .hack-2019-wrapper .schedule-wrapper .section-content .schedule-block-wrapper .text-content {
       color: #fff; }
-  .hack-2019-wrapper .register-wrapper .register-main {
-    margin: .18rem 0; }
-    .hack-2019-wrapper .register-wrapper .register-main h5.text-title {
-      margin: .32rem 0;
-      font-size: .32rem;
-      font-weight: 400; }
-    .hack-2019-wrapper .register-wrapper .register-main p.register-guide-title {
-      margin: .40rem 0 !important;
-      color: #fff;
-      font-size: .40rem;
-      line-height: .32rem; }
-    .hack-2019-wrapper .register-wrapper .register-main p {
-      margin: .14rem 0 !important;
-      font-size: .28rem;
-      line-height: .48rem;
-      letter-spacing: .032rem; }
   .scroll-bar {
     display: none; }
   footer {

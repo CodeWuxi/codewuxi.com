@@ -255,7 +255,8 @@ footer {
   outline: none;
   -webkit-transition: all .5s;
   transition: all .5s;
-  white-space: nowrap; }
+  white-space: nowrap;
+  color: #000; }
   .cw-button.button-black {
     width: 2rem;
     border: 1px solid #fff;
@@ -514,7 +515,7 @@ footer {
     .index-wrapper .banner-wrapper .swiper-container .swiper-slide .swiper-text {
       position: absolute;
       top: 50%;
-      left: -8rem;
+      left: 4.5rem;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
       color: #fff;
@@ -587,6 +588,18 @@ footer {
     width: 0%; }
   100% {
     width: 100%; } }
+
+@-webkit-keyframes moveIn {
+  0% {
+    left: -8rem; }
+  100% {
+    left: 4.5rem; } }
+
+@keyframes moveIn {
+  0% {
+    left: -8rem; }
+  100% {
+    left: 4.5rem; } }
 
 @-webkit-keyframes moveInPhone {
   0% {
