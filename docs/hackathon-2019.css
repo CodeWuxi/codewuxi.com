@@ -533,6 +533,8 @@ li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .hack-2019-wrapper .section-wrapper.sponsors-wrapper .photo-wall {
+      display: block !important; }
     .hack-2019-wrapper .section-wrapper .section-content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -594,6 +596,9 @@ li a {
           height: .6rem; }
           .hack-2019-wrapper .section-wrapper .section-content .photo-wall .logo-item img {
             height: 100%; }
+          .hack-2019-wrapper .section-wrapper .section-content .photo-wall .logo-item.logo-in-one-line {
+            display: block;
+            text-align: center; }
   .hack-2019-wrapper .hack-col-title {
     position: fixed;
     top: 1.5rem;
